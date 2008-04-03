@@ -41,14 +41,23 @@
 - (void)addClient:(Client*)client
 {
   [clients addObject:client];
+  
+  if ([delegate respondsToSelector:@selector(clientList:clientAdded:)]) {
+    [delegate clientList:self clientAdded:client];
+  }
 }
 
 - (void)removeClient:(NSString*)clientId
 {
   Client* client = [self getClient:clientId];
+  
   if (client) {
     [clients removeObject:client];
     [client release];
+  }
+  
+  if ([delegate respondsToSelector:@selector(clientList:clientRemoved:)]) {
+    [delegate clientList:self clientRemoved:client];
   }
 }
 

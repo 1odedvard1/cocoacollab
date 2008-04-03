@@ -29,6 +29,6 @@
 #pragma mark -
 
 @interface NSObject (ClientListDelegate)
-- (void)clientlist:(ClientList*)clientList clientAdded:(Client*)client;
+- (void)clientList:(ClientList*)clientList clientAdded:(Client*)client;
 - (void)clientList:(ClientList*)clientList clientRemoved:(Client*)client;
 @end
