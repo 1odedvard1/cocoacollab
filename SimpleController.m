@@ -17,6 +17,11 @@
 - (void)processIncomingXML:(NSXMLDocument*)pXML;
 @end
 
+@interface SimpleController (ClientListDelegate)
+- (void)clientList:(ClientList*)clientList clientAdded:(Client*)client;
+- (void)clientList:(ClientList*)clientList clientRemoved:(Client*)client;
+@end
+
 @interface SimpleController (ProtocolHandler)
 - (void)handle_upcSetClientID:(UPCMessage*)message;
 - (void)handle_upcOnClientAttributeUpdate:(UPCMessage*)pMessage;
@@ -29,6 +34,7 @@
   self = [super init];
   
   clients = [[ClientList alloc] init];
+  [clients setDelegate:self];
   
   socket = [[XMLSocket alloc] init];
   [socket setDelegate:self];
@@ -101,7 +107,18 @@
 
 - (id)tableView:(NSTableView*)pTableView objectValueForTableColumn:(NSTableColumn*)pTableColumn row:(int)pRow
 {
-  return [[clients clients] objectAtIndex:pRow];
+  Client* client = [[clients clients] objectAtIndex:pRow];
+  
+  if (client) {
+    if ([client hasAttribute:@"username"]) {
+      return [client getAttribute:@"username"];
+    }
+    else {
+      return [NSString stringWithFormat:@"Guest%@", [client clientId]];
+    }
+  }
+  
+  return nil;
 }
 
 #pragma mark -
@@ -134,6 +151,18 @@
     }
     [selectorName release];
   }
+}
+
+#pragma mark -
+
+- (void)clientList:(ClientList*)clientList clientAdded:(Client*)client
+{
+  [usersTable reloadData];
+}
+
+- (void)clientList:(ClientList*)clientList clientRemoved:(Client*)client
+{
+  [usersTable reloadData];
 }
 
 #pragma mark -

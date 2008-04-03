@@ -39,6 +39,11 @@
   return [attributes valueForKey:name];
 }
 
+- (BOOL)hasAttribute:(NSString*)name
+{
+  return ([attributes valueForKey:name]) ? YES : NO;
+}
+
 - (void)setAttribute:(NSString*)name withValue:(NSString*)value
 {
   [attributes setValue:value forKey:name];

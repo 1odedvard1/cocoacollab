@@ -22,6 +22,7 @@
 
 - (NSString*)getAttribute:(NSString*)name;
 - (void)setAttribute:(NSString*)name withValue:(NSString*)value;
+- (BOOL)hasAttribute:(NSString*)name;
 - (void)removeAttribute:(NSString*)name;
 
 + (Client*)fromId:(NSString*)clientId;
