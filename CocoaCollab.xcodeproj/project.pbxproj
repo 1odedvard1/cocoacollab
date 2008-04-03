@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		AD032D840DA174800039A853 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD032D830DA174800039A853 /* OCMock.framework */; };
+		AD032EBC0DA1C8820039A853 /* SimpleController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD032EBB0DA1C8820039A853 /* SimpleController.m */; };
+		AD5F1FD00DA1720A00BB44B0 /* XMLSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5F1FCF0DA1720A00BB44B0 /* XMLSocketTests.m */; };
+		AD66B65C0DA2B47700AC0B89 /* UPCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD66B65A0DA2B47700AC0B89 /* UPCMessage.m */; };
+		ADADD50F0DA04C0000874171 /* XMLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADADD50E0DA04C0000874171 /* XMLSocket.m */; };
+		ADD8385A0D93AA62007BCA95 /* NetSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD838580D93AA62007BCA95 /* NetSocket.m */; };
+		ADE283D50DA4E20D005D3B0A /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE283D20DA4E20D005D3B0A /* Client.m */; };
+		ADE283D60DA4E20D005D3B0A /* ClientList.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE283D40DA4E20D005D3B0A /* ClientList.m */; };
+		ADE283EA0DA4E326005D3B0A /* ClientListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE283E70DA4E326005D3B0A /* ClientListTests.m */; };
+		ADE283EB0DA4E326005D3B0A /* ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE283E90DA4E326005D3B0A /* ClientTests.m */; };
+		ADE9E58B0D9F10F300CA3EA3 /* NullTerminatedTokenBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE9E58A0D9F10F300CA3EA3 /* NullTerminatedTokenBuffer.m */; };
+		ADE9E5C00D9F35F000CA3EA3 /* NullTerminatedTokenBufferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE9E5BC0D9F32F600CA3EA3 /* NullTerminatedTokenBufferTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADE9E4F50D9EE41900CA3EA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = CocoaCollab;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* CocoaCollab_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaCollab_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* CocoaCollab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaCollab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD032D830DA174800039A853 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = /Library/Frameworks/OCMock.framework; sourceTree = "<absolute>"; };
+		AD032EBA0DA1C8820039A853 /* SimpleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleController.h; sourceTree = "<group>"; };
+		AD032EBB0DA1C8820039A853 /* SimpleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleController.m; sourceTree = "<group>"; };
+		AD5F1FCE0DA1720A00BB44B0 /* XMLSocketTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLSocketTests.h; sourceTree = "<group>"; };
+		AD5F1FCF0DA1720A00BB44B0 /* XMLSocketTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLSocketTests.m; sourceTree = "<group>"; };
+		AD66B65A0DA2B47700AC0B89 /* UPCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPCMessage.m; sourceTree = "<group>"; };
+		AD66B65B0DA2B47700AC0B89 /* UPCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPCMessage.h; sourceTree = "<group>"; };
+		ADADD50D0DA04C0000874171 /* XMLSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLSocket.h; sourceTree = "<group>"; };
+		ADADD50E0DA04C0000874171 /* XMLSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLSocket.m; sourceTree = "<group>"; };
+		ADD838580D93AA62007BCA95 /* NetSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetSocket.m; sourceTree = "<group>"; };
+		ADD838590D93AA62007BCA95 /* NetSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetSocket.h; sourceTree = "<group>"; };
+		ADE283D10DA4E20D005D3B0A /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		ADE283D20DA4E20D005D3B0A /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
+		ADE283D30DA4E20D005D3B0A /* ClientList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientList.h; sourceTree = "<group>"; };
+		ADE283D40DA4E20D005D3B0A /* ClientList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientList.m; sourceTree = "<group>"; };
+		ADE283E60DA4E326005D3B0A /* ClientListTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientListTests.h; sourceTree = "<group>"; };
+		ADE283E70DA4E326005D3B0A /* ClientListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientListTests.m; sourceTree = "<group>"; };
+		ADE283E80DA4E326005D3B0A /* ClientTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientTests.h; sourceTree = "<group>"; };
+		ADE283E90DA4E326005D3B0A /* ClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientTests.m; sourceTree = "<group>"; };
+		ADE9E4F00D9EE3F500CA3EA3 /* CocoaCollabTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaCollabTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE9E4F10D9EE3F500CA3EA3 /* CocoaCollabTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaCollabTests-Info.plist"; sourceTree = "<group>"; };
+		ADE9E5890D9F10F300CA3EA3 /* NullTerminatedTokenBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullTerminatedTokenBuffer.h; sourceTree = "<group>"; };
+		ADE9E58A0D9F10F300CA3EA3 /* NullTerminatedTokenBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullTerminatedTokenBuffer.m; sourceTree = "<group>"; };
+		ADE9E5BB0D9F32F600CA3EA3 /* NullTerminatedTokenBufferTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullTerminatedTokenBufferTests.h; sourceTree = "<group>"; };
+		ADE9E5BC0D9F32F600CA3EA3 /* NullTerminatedTokenBufferTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullTerminatedTokenBufferTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE9E4ED0D9EE3F500CA3EA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD032D840DA174800039A853 /* OCMock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ADE283EE0DA4E35B005D3B0A /* Collab */,
+				AD0BF6230D9F9C9F006F80A8 /* Net */,
+				ADADD5080DA0493B00874171 /* Util */,
+				AD032EBA0DA1C8820039A853 /* SimpleController.h */,
+				AD032EBB0DA1C8820039A853 /* SimpleController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD032D830DA174800039A853 /* OCMock.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* CocoaCollab.app */,
+				ADE9E4F00D9EE3F500CA3EA3 /* CocoaCollabTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CocoaCollab */ = {
+			isa = PBXGroup;
+			children = (
+				ADE9E4FE0D9EE51A00CA3EA3 /* Tests */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				ADE9E4F10D9EE3F500CA3EA3 /* CocoaCollabTests-Info.plist */,
+			);
+			name = CocoaCollab;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* CocoaCollab_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD0BF6230D9F9C9F006F80A8 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				ADD838580D93AA62007BCA95 /* NetSocket.m */,
+				ADD838590D93AA62007BCA95 /* NetSocket.h */,
+				ADADD50D0DA04C0000874171 /* XMLSocket.h */,
+				ADADD50E0DA04C0000874171 /* XMLSocket.m */,
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
+		AD0BF6340D9F9D02006F80A8 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F1FCE0DA1720A00BB44B0 /* XMLSocketTests.h */,
+				AD5F1FCF0DA1720A00BB44B0 /* XMLSocketTests.m */,
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
+		ADADD5080DA0493B00874171 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				ADE9E5890D9F10F300CA3EA3 /* NullTerminatedTokenBuffer.h */,
+				ADE9E58A0D9F10F300CA3EA3 /* NullTerminatedTokenBuffer.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		ADADD5790DA073D600874171 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				ADE9E5BB0D9F32F600CA3EA3 /* NullTerminatedTokenBufferTests.h */,
+				ADE9E5BC0D9F32F600CA3EA3 /* NullTerminatedTokenBufferTests.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		ADE283EE0DA4E35B005D3B0A /* Collab */ = {
+			isa = PBXGroup;
+			children = (
+				AD66B65A0DA2B47700AC0B89 /* UPCMessage.m */,
+				AD66B65B0DA2B47700AC0B89 /* UPCMessage.h */,
+				ADE283D10DA4E20D005D3B0A /* Client.h */,
+				ADE283D20DA4E20D005D3B0A /* Client.m */,
+				ADE283D30DA4E20D005D3B0A /* ClientList.h */,
+				ADE283D40DA4E20D005D3B0A /* ClientList.m */,
+			);
+			name = Collab;
+			sourceTree = "<group>";
+		};
+		ADE283EF0DA4E366005D3B0A /* Collab */ = {
+			isa = PBXGroup;
+			children = (
+				ADE283E60DA4E326005D3B0A /* ClientListTests.h */,
+				ADE283E70DA4E326005D3B0A /* ClientListTests.m */,
+				ADE283E80DA4E326005D3B0A /* ClientTests.h */,
+				ADE283E90DA4E326005D3B0A /* ClientTests.m */,
+			);
+			name = Collab;
+			sourceTree = "<group>";
+		};
+		ADE9E4FE0D9EE51A00CA3EA3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				ADE283EF0DA4E366005D3B0A /* Collab */,
+				AD0BF6340D9F9D02006F80A8 /* Net */,
+				ADADD5790DA073D600874171 /* Util */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* CocoaCollab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CocoaCollab" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaCollab;
+			productInstallPath = "$(HOME)/Applications";
+			productName = CocoaCollab;
+			productReference = 8D1107320486CEB800E47090 /* CocoaCollab.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADE9E4EF0D9EE3F500CA3EA3 /* CocoaCollabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADE9E4F40D9EE3F600CA3EA3 /* Build configuration list for PBXNativeTarget "CocoaCollabTests" */;
+			buildPhases = (
+				ADE9E4EB0D9EE3F500CA3EA3 /* Resources */,
+				ADE9E4EC0D9EE3F500CA3EA3 /* Sources */,
+				ADE9E4ED0D9EE3F500CA3EA3 /* Frameworks */,
+				ADE9E4EE0D9EE3F500CA3EA3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADE9E4F60D9EE41900CA3EA3 /* PBXTargetDependency */,
+			);
+			name = CocoaCollabTests;
+			productName = CocoaCollabTests;
+			productReference = ADE9E4F00D9EE3F500CA3EA3 /* CocoaCollabTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CocoaCollab" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CocoaCollab */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* CocoaCollab */,
+				ADE9E4EF0D9EE3F500CA3EA3 /* CocoaCollabTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE9E4EB0D9EE3F500CA3EA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ADE9E4EE0D9EE3F500CA3EA3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				ADD8385A0D93AA62007BCA95 /* NetSocket.m in Sources */,
+				ADE9E58B0D9F10F300CA3EA3 /* NullTerminatedTokenBuffer.m in Sources */,
+				ADADD50F0DA04C0000874171 /* XMLSocket.m in Sources */,
+				AD032EBC0DA1C8820039A853 /* SimpleController.m in Sources */,
+				AD66B65C0DA2B47700AC0B89 /* UPCMessage.m in Sources */,
+				ADE283D50DA4E20D005D3B0A /* Client.m in Sources */,
+				ADE283D60DA4E20D005D3B0A /* ClientList.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE9E4EC0D9EE3F500CA3EA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADE9E5C00D9F35F000CA3EA3 /* NullTerminatedTokenBufferTests.m in Sources */,
+				AD5F1FD00DA1720A00BB44B0 /* XMLSocketTests.m in Sources */,
+				ADE283EA0DA4E326005D3B0A /* ClientListTests.m in Sources */,
+				ADE283EB0DA4E326005D3B0A /* ClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADE9E4F60D9EE41900CA3EA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* CocoaCollab */;
+			targetProxy = ADE9E4F50D9EE41900CA3EA3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADE9E4F20D9EE3F600CA3EA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CocoaCollab.app/Contents/MacOS/CocoaCollab";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "CocoaCollabTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = CocoaCollabTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		ADE9E4F30D9EE3F600CA3EA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CocoaCollab.app/Contents/MacOS/CocoaCollab";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "CocoaCollabTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = CocoaCollabTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CocoaCollab_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = CocoaCollab;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CocoaCollab_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = CocoaCollab;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADE9E4F40D9EE3F600CA3EA3 /* Build configuration list for PBXNativeTarget "CocoaCollabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADE9E4F20D9EE3F600CA3EA3 /* Debug */,
+				ADE9E4F30D9EE3F600CA3EA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CocoaCollab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CocoaCollab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
