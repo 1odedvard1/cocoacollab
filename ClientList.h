@@ -11,9 +11,11 @@
 @class Client;
 
 @interface ClientList : NSObject {
+  id delegate;
   NSMutableArray* clients;
 }
 
+@property(readwrite, assign) id delegate;
 @property(readonly) NSMutableArray* clients;
 
 - (id)init;
@@ -22,4 +24,11 @@
 - (void)addClient:(Client*)client;
 - (void)removeClient:(NSString*)clientId;
 
+@end
+
+#pragma mark -
+
+@interface NSObject (ClientListDelegate)
+- (void)clientlist:(ClientList*)clientList clientAdded:(Client*)client;
+- (void)clientList:(ClientList*)clientList clientRemoved:(Client*)client;
 @end

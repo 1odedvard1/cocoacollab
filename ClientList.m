@@ -11,6 +11,7 @@
 
 @implementation ClientList
 
+@synthesize delegate;
 @synthesize clients;
 
 - (id)init
