@@ -147,6 +147,11 @@
   
   clientId = [[pMessage args] objectAtIndex:0];
   
+  if (!clientId) {
+    NSLog(@"WARNING: Server omitted client ID");
+    return;
+  }
+  
   [clients addClient:[[Client alloc] initWithId:clientId]];
   
   NSLog(@"Client ID set: %@", clientId);

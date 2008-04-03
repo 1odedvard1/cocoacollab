@@ -11,9 +11,7 @@
 @class Client;
 
 @interface ClientList : NSObject {
-  
   NSMutableArray* clients;
-  
 }
 
 @property(readonly) NSMutableArray* clients;
