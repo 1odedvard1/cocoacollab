@@ -16,7 +16,7 @@
 - (id)init
 {
   id ret = [super init];
-  clients = [[NSMutableDictionary alloc] init];
+  clients = [[NSMutableArray alloc] init];
   return ret;
 }
 
@@ -28,17 +28,27 @@
 
 - (Client*)getClient:(NSString*)clientId
 {
-  return [clients valueForKey:clientId];
+  Client* client;
+  for (client in clients) {
+    if ([clientId isEqualToString:[client clientId]]) {
+      return client;
+    }
+  }
+  return nil;
 }
 
 - (void)addClient:(Client*)client
 {
-  [clients setValue:client forKey:[client clientId]];
+  [clients addObject:client];
 }
 
 - (void)removeClient:(NSString*)clientId
 {
-  [clients removeObjectForKey:clientId];
+  Client* client = [self getClient:clientId];
+  if (client) {
+    [clients removeObject:client];
+    [client release];
+  }
 }
 
 @end

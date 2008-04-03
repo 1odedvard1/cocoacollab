@@ -19,6 +19,7 @@
 
 @interface SimpleController (ProtocolHandler)
 - (void)handle_upcSetClientID:(UPCMessage*)message;
+- (void)handle_upcOnClientAttributeUpdate:(UPCMessage*)pMessage;
 @end
 
 @implementation SimpleController
@@ -149,6 +150,20 @@
   [clients addClient:[[Client alloc] initWithId:clientId]];
   
   NSLog(@"Client ID set: %@", clientId);
+}
+
+- (void)handle_upcOnClientAttributeUpdate:(UPCMessage*)pMessage
+{
+  NSString* cid = [[pMessage args] objectAtIndex:2];
+  NSString* key = [[pMessage args] objectAtIndex:3];
+  NSString* val = [[pMessage args] objectAtIndex:4];
+  
+  Client* client = [clients getClient:cid];
+  if (client) {
+    [client setAttribute:key withValue:val];
+  }
+  
+  NSLog(@"%@: '%@' -> '%@'", cid, key, val);
 }
 
 @end

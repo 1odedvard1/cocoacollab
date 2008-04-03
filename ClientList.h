@@ -16,7 +16,7 @@
   
 }
 
-@property(readonly) NSDictionary* clients;
+@property(readonly) NSMutableArray* clients;
 
 - (id)init;
 

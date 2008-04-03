@@ -197,7 +197,56 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>ADE2840E0DA58F88005D3B0A</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>SimpleController.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>ADE2840F0DA58F88005D3B0A</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>SimpleController.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>ADE2842A0DA590B3005D3B0A</string>
+						<key>history</key>
+						<array>
+							<string>ADE284130DA58FF0005D3B0A</string>
+							<string>ADE284140DA58FF0005D3B0A</string>
+						</array>
+						<key>prevStack</key>
+						<array>
+							<string>ADE284150DA58FF0005D3B0A</string>
+							<string>ADE284160DA58FF0005D3B0A</string>
+							<string>ADE284170DA58FF0005D3B0A</string>
+							<string>ADE284180DA58FF0005D3B0A</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {849, 660}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>475 118 849 701 0 0 1440 878 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -276,23 +325,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>1</integer>
-									<integer>0</integer>
-								</array>
-								<array>
-									<integer>7</integer>
-									<integer>1</integer>
-									<integer>0</integer>
-								</array>
-								<array>
-									<integer>8</integer>
-									<integer>1</integer>
-									<integer>0</integer>
-								</array>
-								<array>
-									<integer>9</integer>
-									<integer>1</integer>
+									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -537,8 +570,9 @@
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>ADD8386C0D93B074007BCA95</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/crowley/Work/Personal/Cocoa/CocoaCollab/CocoaCollab.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>ADE2840E0DA58F88005D3B0A</string>
 	</array>
 	<key>WindowString</key>
 	<string>13 67 723 483 0 0 1440 878 </string>
