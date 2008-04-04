@@ -33,7 +33,7 @@
         [delegate nullTerminatedTokenBuffer:self tokenAvailable:part];
       }
     }
-    [buffer deleteCharactersInRange:NSMakeRange(0, [part length])];
+    [buffer deleteCharactersInRange:NSMakeRange(0, [part length] + 1)];
   }
   
   NSString* end = [buffer substringFromIndex:[buffer length]];

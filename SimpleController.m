@@ -25,6 +25,9 @@
 @interface SimpleController (ProtocolHandler)
 - (void)handle_upcSetClientID:(UPCMessage*)message;
 - (void)handle_upcOnClientAttributeUpdate:(UPCMessage*)pMessage;
+- (void)handle_upcOnJoinRoom:(UPCMessage*)pMessage;
+- (void)handle_displayMessage:(UPCMessage*)pMessage;
+- (void)handle_upcSetClientList:(UPCMessage*)pMessage;
 @end
 
 @implementation SimpleController
@@ -185,7 +188,8 @@
   
   NSLog(@"Client ID set: %@", clientId);
   
-  UPCMessage* joinMessage = [[UPCMessage alloc] initWithMethod:@"joinRoom" withRoomId:@"unity" withArgs:@"global2", @"collab", @"null", nil];
+  UPCMessage* joinMessage =
+    [[UPCMessage alloc] initWithMethod:@"joinRoom" withRoomId:@"unity" withArgs:@"global", @"collab", @"null", nil];
   
   [socket sendXML:[joinMessage XMLDocument]];
 }
@@ -202,6 +206,38 @@
   }
   
   NSLog(@"%@: '%@' -> '%@'", cid, key, val);
+}
+
+- (void)handle_upcOnJoinRoom:(UPCMessage*)pMessage
+{
+  //NSString*
+}
+
+- (void)handle_displayMessage:(UPCMessage*)pMessage
+{
+  NSString* cid = [[pMessage args] objectAtIndex:0];
+  NSString* msg = [[pMessage args] objectAtIndex:1];
+  
+  Client* client = [clients getClient:cid];
+  
+  if (client) {
+    NSString* output = [NSString stringWithFormat:@"<%@> %@", cid, msg];
+    [self appendOutputText:output];
+  }
+}
+
+- (void)handle_upcSetClientList:(UPCMessage*)pMessage
+{
+  int i;
+  
+  for (i = 2; i < [pMessage.args count]; i += 2) {
+    NSString* cid   = [pMessage.args objectAtIndex:i];
+    NSString* attrs = [pMessage.args objectAtIndex:i+1];
+    
+    Client* client = [Client fromId:cid andUnityAttributeString:attrs];
+    
+    [clients addClient:client];
+  }
 }
 
 @end
