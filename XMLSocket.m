@@ -46,8 +46,7 @@
 - (void)_cfsocketDataAvailable
 {
   [super _cfsocketDataAvailable];
-  /* @todo THIS IS WHERE THE PROBLEM IS! */
-  [buffer appendData:[NSString stringWithCString:[mIncomingBuffer bytes] length:[mIncomingBuffer length]]];
+  [buffer appendData:[self readString:NSUTF8StringEncoding]];
 }
 
 #pragma mark -
