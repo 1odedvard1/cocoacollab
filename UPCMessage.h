@@ -18,8 +18,8 @@
 @property(readwrite, copy) NSString* roomId;
 @property(readwrite, assign) NSMutableArray* args;
 
-- (id)initWithMethod:(NSString*)pMethod;
-- (id)initWithMethod:(NSString*)pMethod withArgs:firstArg, ...;
+- (id)initWithMethod:(NSString*)pMethod withRoomId:(NSString*)pRoomId;
+- (id)initWithMethod:(NSString*)pMethod withRoomId:(NSString*)pRoomId withArgs:firstArg, ...;
 
 - (NSXMLDocument*)XMLDocument;
 

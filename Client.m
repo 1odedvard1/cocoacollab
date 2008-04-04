@@ -16,16 +16,17 @@
 
 - (id)init
 {
-  id ret = [super init];
+  self = [super init];
   attributes = [[NSMutableDictionary alloc] init];
-  return ret;
+  return self;
 }
 
 - (id)initWithId:(NSString*)pId
 {
-  id ret = [self init];
-  clientId = pId;
-  return ret;
+  self = [self init];
+  NSLog(@"New client created with ID '%@'", pId);
+  clientId = [pId copy];
+  return self;
 }
 
 - (void)release

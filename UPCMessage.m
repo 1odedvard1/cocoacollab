@@ -21,16 +21,17 @@
   return self;
 }
 
-- (id)initWithMethod:(NSString*)pMethod
+- (id)initWithMethod:(NSString*)pMethod withRoomId:(NSString*)pRoomId
 {
   self = [self init];
   method = pMethod;
+  roomId = pRoomId;
   return self;
 }
 
-- (id)initWithMethod:(NSString*)pMethod withArgs:firstArg, ...
+- (id)initWithMethod:(NSString*)pMethod withRoomId:(NSString*)pRoomId withArgs:firstArg, ...
 {
-  id ret = [self initWithMethod:pMethod];
+  id ret = [self initWithMethod:pMethod withRoomId:pRoomId];
   
   va_list argsList;
   id eachArg;

@@ -114,7 +114,7 @@
       return [client getAttribute:@"username"];
     }
     else {
-      return [NSString stringWithFormat:@"Guest%@", [client clientId]];
+      return [NSString stringWithFormat:@"User%@", [client clientId]];
     }
   }
   
@@ -184,6 +184,10 @@
   [clients addClient:[[Client alloc] initWithId:clientId]];
   
   NSLog(@"Client ID set: %@", clientId);
+  
+  UPCMessage* joinMessage = [[UPCMessage alloc] initWithMethod:@"joinRoom" withRoomId:@"unity" withArgs:@"global2", @"collab", @"null", nil];
+  
+  [socket sendXML:[joinMessage XMLDocument]];
 }
 
 - (void)handle_upcOnClientAttributeUpdate:(UPCMessage*)pMessage

@@ -36,7 +36,9 @@
 
 - (void)sendXML:(NSXMLDocument*)pXML
 {
-  [self writeString:[[pXML XMLString] stringByAppendingString:NULL_TERMINATOR] encoding:NSUTF8StringEncoding];
+  NSString* data = [[pXML XMLString] stringByAppendingString:NULL_TERMINATOR];
+  [self writeString:data encoding:NSUTF8StringEncoding];
+  NSLog(@"->> %@", data);
 }
 
 #pragma mark -
@@ -59,6 +61,8 @@
   }
   
   [err release];
+  
+  NSLog(@"<<- %@", pToken);
 }
 
 @end
