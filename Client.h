@@ -20,12 +20,14 @@
 - (id)init;
 - (id)initWithId:(NSString*)clientId;
 
+- (NSString*)username;
+
 - (NSString*)getAttribute:(NSString*)name;
 - (void)setAttribute:(NSString*)name withValue:(NSString*)value;
 - (BOOL)hasAttribute:(NSString*)name;
 - (void)removeAttribute:(NSString*)name;
 
 + (Client*)fromId:(NSString*)clientId;
-+ (Client*)fromId:(NSString*)clientId andUnityAttributeString:(NSString*)attributes;
++ (Client*)fromId:(NSString*)pClentId andUnityAttributeString:(NSString*)pAttributes;
 
 @end

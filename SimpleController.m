@@ -15,7 +15,10 @@
 
 @interface SimpleController (Private)
 - (void)processIncomingXML:(NSXMLDocument*)pXML;
+- (void)sendPublicMessage:(NSString*)pMessage;
 @end
+
+#pragma mark -
 
 @interface SimpleController (ClientListDelegate)
 - (void)clientList:(ClientList*)clientList clientAdded:(Client*)client;
@@ -28,6 +31,10 @@
 - (void)handle_upcOnJoinRoom:(UPCMessage*)pMessage;
 - (void)handle_displayMessage:(UPCMessage*)pMessage;
 - (void)handle_upcSetClientList:(UPCMessage*)pMessage;
+- (void)handle_meText:(UPCMessage*)pMessage;
+- (void)handle_joinMessage:(UPCMessage*)pMessage;
+- (void)handle_upcOnRemoveClient:(UPCMessage*)pMessage;
+- (void)handle_upcOnAddClient:(UPCMessage*)pMessage;
 @end
 
 @implementation SimpleController
@@ -47,7 +54,7 @@
 
 - (void)awakeFromNib
 {
-  [self connect:nil];
+  //[self connect:nil];
 }
 
 - (void)dealloc
@@ -76,13 +83,18 @@
 - (IBAction)processInput:(id)sender
 {
   NSLog(@"processInput");
+  
+  NSString* input = [sender stringValue];
+  //[self sendPublicMessage:input];
+  
+  [sender replaceCharactersInRange:NSMakeRange(0, [input length]) withString:@""];
 }
 
 #pragma mark -
 
 - (void)netsocketConnected:(NetSocket*)pSocket
 {
-  [self appendOutputText:@"Connected."];
+  [self appendOutputText:@"Welcome to Collab!"];
 }
 
 - (void)netsocket:(NetSocket*)pSocket connectionTimedOut:(NSTimeInterval*)pTimeout
@@ -110,18 +122,17 @@
 
 - (id)tableView:(NSTableView*)pTableView objectValueForTableColumn:(NSTableColumn*)pTableColumn row:(int)pRow
 {
-  Client* client = [[clients clients] objectAtIndex:pRow];
+  return [[[clients clients] objectAtIndex:pRow] username];
+}
+
+#pragma mark -
+
+- (void)sendPublicMessage:(NSString*)pMessage
+{
+  UPCMessage* message =
+    [[UPCMessage alloc] initWithMethod:@"invokeOnRoom" withRoomId:@"unity" withArgs:@"displayMessage", @"collab.global", @"false", pMessage, nil];
   
-  if (client) {
-    if ([client hasAttribute:@"username"]) {
-      return [client getAttribute:@"username"];
-    }
-    else {
-      return [NSString stringWithFormat:@"User%@", [client clientId]];
-    }
-  }
-  
-  return nil;
+  [socket sendXML:[message XMLDocument]];
 }
 
 #pragma mark -
@@ -221,8 +232,7 @@
   Client* client = [clients getClient:cid];
   
   if (client) {
-    NSString* output = [NSString stringWithFormat:@"<%@> %@", cid, msg];
-    [self appendOutputText:output];
+    [self appendOutputText:[NSString stringWithFormat:@"%@: %@", [client username], msg]];
   }
 }
 
@@ -230,14 +240,42 @@
 {
   int i;
   
-  for (i = 2; i < [pMessage.args count]; i += 2) {
+  for (i = 2; i < [pMessage.args count]; i += 3) {
     NSString* cid   = [pMessage.args objectAtIndex:i];
-    NSString* attrs = [pMessage.args objectAtIndex:i+1];
     
-    Client* client = [Client fromId:cid andUnityAttributeString:attrs];
-    
-    [clients addClient:client];
+    if (![clientId isEqualToString:cid]) {
+      NSString* attrs = [pMessage.args objectAtIndex:i+1];
+      
+      [clients addClient:[Client fromId:cid andUnityAttributeString:attrs]];
+    }
   }
+}
+
+- (void)handle_meText:(UPCMessage*)pMessage
+{
+  NSString* cid = [[pMessage args] objectAtIndex:0];
+  NSString* msg = [[pMessage args] objectAtIndex:1];
+  
+  Client* client = [clients getClient:cid];
+  
+  if (client) {
+    [self appendOutputText:[NSString stringWithFormat:@" * %@ %@", [client username], msg]];
+  }
+}
+
+- (void)handle_joinMessage:(UPCMessage*)pMessage
+{
+  
+}
+
+- (void)handle_upcOnRemoveClient:(UPCMessage*)pMessage
+{
+  
+}
+
+- (void)handle_upcOnAddClient:(UPCMessage*)pMessage
+{
+  
 }
 
 @end

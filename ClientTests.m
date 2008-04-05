@@ -58,15 +58,15 @@
 
 - (void)test_fromId_andUnityAttributeString
 {
-  Client* client = [Client fromId:@"TEST_ID" andUnityAttributeString:@"TEST_ATTR1=TEST_VAL1|TEST_ATTR2=TEST_VAL2"];
+  Client* client = [Client fromId:@"TEST_ID" andUnityAttributeString:@"trivia=true|rank=guest|_IP=84.142.235.63|username=Eaza|location=collab|_CONNECTTIME=1206568705423"];
   
-  STAssertTrue([@"TEST_ID" isEqualToString:[client clientId]], [client clientId]);
+  STAssertTrue([@"TEST_ID" isEqualToString:[client clientId]], @"Client id is %@", [client clientId]);
   
-  NSString* value = [client getAttribute:@"TEST_ATTR1"];
-  STAssertTrue([@"TEST_VAL1" isEqualToString:value], @"Value is '%@'", value);
+  NSString* value = [client getAttribute:@"rank"];
+  STAssertTrue([@"guest" isEqualToString:value], @"Value is '%@'", value);
   
-  value = [client getAttribute:@"TEST_ATTR2"];
-  STAssertTrue([@"TEST_VAL2" isEqualToString:value], @"Value is '%@'", value);
+  value = [client getAttribute:@"username"];
+  STAssertTrue([@"Eaza" isEqualToString:value], @"Value is '%@'", value);
   
   [client release];
 }

@@ -35,6 +35,14 @@
   [attributes release];
 }
 
+- (NSString*)username
+{
+  if ([self hasAttribute:@"username"]) {
+    return [self getAttribute:@"username"];
+  }
+  return [NSString stringWithFormat:@"user%@", [self clientId]];
+}
+
 - (NSString*)getAttribute:(NSString*)name
 {
   return [attributes valueForKey:name];
@@ -60,13 +68,11 @@
   return [[Client alloc] initWithId:clientId];
 }
 
-+ (Client*)fromId:(NSString*)clientId andUnityAttributeString:(NSString*)attributes
++ (Client*)fromId:(NSString*)pClentId andUnityAttributeString:(NSString*)pAttributes
 {
-  Client* ret = [[Client alloc] initWithId:clientId];
+  Client* ret = [[Client alloc] initWithId:pClentId];
   
-  // trivia=true|rank=guest|_IP=84.142.235.63|username=Eaza|location=collab|_CONNECTTIME=1206568705423
-  
-  NSArray* parts = [attributes componentsSeparatedByString:@"|"];
+  NSArray* parts = [pAttributes componentsSeparatedByString:@"|"];
   int i;
   for (i = 0; i < [parts count]; i++) {
     NSString* part = [parts objectAtIndex:i];
