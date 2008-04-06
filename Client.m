@@ -31,7 +31,7 @@
 
 - (void)release
 {
-  [clientId release];
+  // [clientId release]; no?
   [attributes release];
 }
 

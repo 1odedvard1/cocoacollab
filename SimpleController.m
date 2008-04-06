@@ -296,6 +296,15 @@
 
 - (void)handle_upcOnRemoveClient:(UPCMessage*)pMessage
 {
+  NSString* cid = [[pMessage args] objectAtIndex:2];
+  
+  Client* client = [clients getClient:cid];
+  
+  if (client) {
+    [self appendOutputText:[NSString stringWithFormat:@"%@ left.", [client username]]];
+  }
+  
+  [clients removeClient:cid];
 }
 
 - (void)handle_upcOnAddClient:(UPCMessage*)pMessage
