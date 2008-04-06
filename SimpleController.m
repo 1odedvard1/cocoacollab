@@ -54,7 +54,7 @@
 
 - (void)awakeFromNib
 {
-  [self connect:nil];
+  //[self connect:nil];
 }
 
 - (void)dealloc
