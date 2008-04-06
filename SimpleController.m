@@ -84,10 +84,12 @@
 {
   NSLog(@"processInput");
   
-  NSString* input = [sender stringValue];
+  //NSString* input = [sender stringValue];
   //[self sendPublicMessage:input];
   
-  [sender replaceCharactersInRange:NSMakeRange(0, [input length]) withString:@""];
+  [[self window] makeFirstResponder:sender];
+  
+  [sender setString:@""];
 }
 
 #pragma mark -
