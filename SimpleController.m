@@ -54,13 +54,14 @@
 
 - (void)awakeFromNib
 {
-  //[self connect:nil];
+  [self connect:nil];
 }
 
 - (void)dealloc
 {
   [clients release];
   [socket release];
+  [clientId release];
   [super dealloc];
 }
 
@@ -69,7 +70,7 @@
 - (IBAction)connect:(id)sender
 {
   [socket open];
-  [socket connectToHost:DEFAULT_HOST port:DEFAULT_PORT];
+  [socket connectToHost:DEFAULT_HOST port:DEFAULT_PORT timeout:10];
   [socket scheduleOnCurrentRunLoop];
   [self appendOutputText:@"Connecting.."];
 }
@@ -84,19 +85,25 @@
 {
   NSLog(@"processInput");
   
-  //NSString* input = [sender stringValue];
-  //[self sendPublicMessage:input];
+  NSString* input = [sender stringValue];
+  [self sendPublicMessage:input];
+
+  Client* client = [clients getClient:clientId];
   
-  [[self window] makeFirstResponder:sender];
+  if (client) {
+    [self appendOutputText:[NSString stringWithFormat:@"%@: %@", [client username], input]];
+  }
   
-  [sender setString:@""];
+  [[self window] makeFirstResponder:inputText];
+  
+  [inputText setStringValue:@""];
 }
 
 #pragma mark -
 
 - (void)netsocketConnected:(NetSocket*)pSocket
 {
-  [self appendOutputText:@"Welcome to Collab!"];
+  [self appendOutputText:@"Connected."];
 }
 
 - (void)netsocket:(NetSocket*)pSocket connectionTimedOut:(NSTimeInterval*)pTimeout
@@ -190,7 +197,7 @@
     return;
   }
   
-  clientId = [[pMessage args] objectAtIndex:0];
+  clientId = [[[pMessage args] objectAtIndex:0] copy];
   
   if (!clientId) {
     NSLog(@"WARNING: Server omitted client ID");
@@ -223,7 +230,9 @@
 
 - (void)handle_upcOnJoinRoom:(UPCMessage*)pMessage
 {
-  //NSString*
+  [self appendOutputText:@"Welcome to Collab!"];
+  
+  /* @todo send join message */
 }
 
 - (void)handle_displayMessage:(UPCMessage*)pMessage
@@ -242,7 +251,7 @@
 {
   int i;
   
-  for (i = 2; i < [pMessage.args count]; i += 3) {
+  for (i = 2; i < [pMessage.args count] - 2; i += 3) {
     NSString* cid   = [pMessage.args objectAtIndex:i];
     
     if (![clientId isEqualToString:cid]) {
@@ -267,17 +276,21 @@
 
 - (void)handle_joinMessage:(UPCMessage*)pMessage
 {
+  NSString* msg = [[pMessage args] objectAtIndex:1];
   
+  [self appendOutputText:msg];
 }
 
 - (void)handle_upcOnRemoveClient:(UPCMessage*)pMessage
 {
-  
 }
 
 - (void)handle_upcOnAddClient:(UPCMessage*)pMessage
 {
+  NSString* cid  = [[pMessage args] objectAtIndex:2];
+  NSString* args = [[pMessage args] objectAtIndex:3];
   
+  [clients addClient:[Client fromId:cid andUnityAttributeString:args]];
 }
 
 @end

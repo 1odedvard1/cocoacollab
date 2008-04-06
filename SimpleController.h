@@ -22,9 +22,9 @@
   
   ClientList* clients;
   
-  IBOutlet id inputText;
-  IBOutlet id outputText;
-  IBOutlet id usersTable;
+  IBOutlet NSTextField* inputText;
+  IBOutlet NSTextView* outputText;
+  IBOutlet NSTableView* usersTable;
 }
 
 - (id)init;
