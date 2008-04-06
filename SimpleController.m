@@ -212,6 +212,8 @@
     [[UPCMessage alloc] initWithMethod:@"joinRoom" withRoomId:@"unity" withArgs:@"global", @"collab", @"null", nil];
   
   [socket sendXML:[joinMessage XMLDocument]];
+  
+  [joinMessage release];
 }
 
 - (void)handle_upcOnClientAttributeUpdate:(UPCMessage*)pMessage
@@ -232,7 +234,18 @@
 {
   [self appendOutputText:@"Welcome to Collab!"];
   
-  /* @todo send join message */
+  Client* client = [clients getClient:clientId];
+  
+  if (client) {
+    NSString* msg = [NSString stringWithFormat:@"<b>%@ has joined.</b>", [client username]];
+    
+    UPCMessage* joinMessage =
+      [[UPCMessage alloc] initWithMethod:@"invokeOnRoom" withRoomId:@"unity" withArgs:@"joinMessage", @"collab.global", @"false", msg, nil];
+    
+    [socket sendXML:[joinMessage XMLDocument]];
+    
+    [joinMessage release];
+  }
 }
 
 - (void)handle_displayMessage:(UPCMessage*)pMessage
