@@ -17,6 +17,8 @@
 		AD66B65C0DA2B47700AC0B89 /* UPCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD66B65A0DA2B47700AC0B89 /* UPCMessage.m */; };
 		ADADD50F0DA04C0000874171 /* XMLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADADD50E0DA04C0000874171 /* XMLSocket.m */; };
 		ADD8385A0D93AA62007BCA95 /* NetSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD838580D93AA62007BCA95 /* NetSocket.m */; };
+		ADD8B7440DA9A20500C3528E /* CocoaCollab.sdef in Resources */ = {isa = PBXBuildFile; fileRef = ADD8B7430DA9A20500C3528E /* CocoaCollab.sdef */; };
+		ADD8B74C0DA9AB3E00C3528E /* Collab.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8B74B0DA9AB3E00C3528E /* Collab.m */; };
 		ADE283D50DA4E20D005D3B0A /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE283D20DA4E20D005D3B0A /* Client.m */; };
 		ADE283D60DA4E20D005D3B0A /* ClientList.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE283D40DA4E20D005D3B0A /* ClientList.m */; };
 		ADE283EA0DA4E326005D3B0A /* ClientListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE283E70DA4E326005D3B0A /* ClientListTests.m */; };
@@ -57,6 +59,10 @@
 		ADADD50E0DA04C0000874171 /* XMLSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLSocket.m; sourceTree = "<group>"; };
 		ADD838580D93AA62007BCA95 /* NetSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetSocket.m; sourceTree = "<group>"; };
 		ADD838590D93AA62007BCA95 /* NetSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetSocket.h; sourceTree = "<group>"; };
+		ADD8B7430DA9A20500C3528E /* CocoaCollab.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.sdef; path = CocoaCollab.sdef; sourceTree = "<group>"; };
+		ADD8B7470DA9A28400C3528E /* default.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = default.scpt; sourceTree = "<group>"; };
+		ADD8B74A0DA9AB3E00C3528E /* Collab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collab.h; sourceTree = "<group>"; };
+		ADD8B74B0DA9AB3E00C3528E /* Collab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collab.m; sourceTree = "<group>"; };
 		ADE283D10DA4E20D005D3B0A /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		ADE283D20DA4E20D005D3B0A /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
 		ADE283D30DA4E20D005D3B0A /* ClientList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientList.h; sourceTree = "<group>"; };
@@ -150,8 +156,10 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				ADD8B7430DA9A20500C3528E /* CocoaCollab.sdef */,
 				32CA4F630368D1EE00C91783 /* CocoaCollab_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				ADD8B7470DA9A28400C3528E /* default.scpt */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -222,6 +230,8 @@
 				ADE283D20DA4E20D005D3B0A /* Client.m */,
 				ADE283D30DA4E20D005D3B0A /* ClientList.h */,
 				ADE283D40DA4E20D005D3B0A /* ClientList.m */,
+				ADD8B74A0DA9AB3E00C3528E /* Collab.h */,
+				ADD8B74B0DA9AB3E00C3528E /* Collab.m */,
 			);
 			name = Collab;
 			sourceTree = "<group>";
@@ -312,6 +322,7 @@
 			files = (
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				ADD8B7440DA9A20500C3528E /* CocoaCollab.sdef in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +364,7 @@
 				AD66B65C0DA2B47700AC0B89 /* UPCMessage.m in Sources */,
 				ADE283D50DA4E20D005D3B0A /* Client.m in Sources */,
 				ADE283D60DA4E20D005D3B0A /* ClientList.m in Sources */,
+				ADD8B74C0DA9AB3E00C3528E /* Collab.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

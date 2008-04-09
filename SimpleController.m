@@ -55,6 +55,13 @@
 - (void)awakeFromNib
 {
   //[self connect:nil];
+  
+  NSStatusBar* bar = [NSStatusBar systemStatusBar];
+  
+  statusItem = [bar statusItemWithLength:NSVariableStatusItemLength];
+  [statusItem retain];
+  [statusItem setTitle:@"CocoaCollab"];
+  [statusItem setToolTip:@"CocoaCollab!"];
 }
 
 - (void)dealloc

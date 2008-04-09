@@ -22,6 +22,8 @@
   
   ClientList* clients;
   
+  NSStatusItem* statusItem;
+  
   IBOutlet NSTextField* inputText;
   IBOutlet NSTextView* outputText;
   IBOutlet NSTableView* usersTable;
