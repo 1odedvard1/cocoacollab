@@ -11,4 +11,8 @@
 
 @implementation Collab
 
+@synthesize clientId;
+@synthesize clients;
+@synthesize history;
+
 @end
