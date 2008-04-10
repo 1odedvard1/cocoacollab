@@ -125,7 +125,7 @@
 
 + (id)createMessage:(NSString*)text
 {
-  return [[UPCMessage alloc] initWithMethod:@"displayMessage" withArgs:text];
+  return [[UPCMessage alloc] initWithMethod:@"displayMessage" withRoomId:@"unity" withArgs:text];
 }
 
 + (id)createMessage:(NSString*)text toClient:(NSString*)clientId
