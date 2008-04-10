@@ -7,9 +7,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string></string>
+	<string>CocoaCollab</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.CocoaCollab</string>
+	<string>com.eleventyten.CocoaCollab</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -19,10 +19,14 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>0.0.2</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SUFeedURL</key>
+	<string>http://eleventyten.com/projects/cocoacollab/appcast.xml</string>
+	<key>SUScheduledCheckInterval</key>
+	<string>900</string>
 </dict>
 </plist>

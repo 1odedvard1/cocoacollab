@@ -25,6 +25,10 @@
 		ADE283EB0DA4E326005D3B0A /* ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE283E90DA4E326005D3B0A /* ClientTests.m */; };
 		ADE9E58B0D9F10F300CA3EA3 /* NullTerminatedTokenBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE9E58A0D9F10F300CA3EA3 /* NullTerminatedTokenBuffer.m */; };
 		ADE9E5C00D9F35F000CA3EA3 /* NullTerminatedTokenBufferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE9E5BC0D9F32F600CA3EA3 /* NullTerminatedTokenBufferTests.m */; };
+		ADEE54BD0DADFD73004B9C46 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADEE54BC0DADFD73004B9C46 /* Sparkle.framework */; };
+		ADEE54D90DADFDF5004B9C46 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ADEE54BC0DADFD73004B9C46 /* Sparkle.framework */; };
+		ADEE55270DAE9365004B9C46 /* CocoaCollab.png in Resources */ = {isa = PBXBuildFile; fileRef = ADEE55110DAE905E004B9C46 /* CocoaCollab.png */; };
+		ADEE55280DAE9379004B9C46 /* CocoaCollab.icns in Resources */ = {isa = PBXBuildFile; fileRef = ADEE55080DAE8D94004B9C46 /* CocoaCollab.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,19 @@
 			remoteInfo = CocoaCollab;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ADEE54D80DADFDC4004B9C46 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ADEE54D90DADFDF5004B9C46 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -77,6 +94,9 @@
 		ADE9E58A0D9F10F300CA3EA3 /* NullTerminatedTokenBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullTerminatedTokenBuffer.m; sourceTree = "<group>"; };
 		ADE9E5BB0D9F32F600CA3EA3 /* NullTerminatedTokenBufferTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullTerminatedTokenBufferTests.h; sourceTree = "<group>"; };
 		ADE9E5BC0D9F32F600CA3EA3 /* NullTerminatedTokenBufferTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullTerminatedTokenBufferTests.m; sourceTree = "<group>"; };
+		ADEE54BC0DADFD73004B9C46 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		ADEE55080DAE8D94004B9C46 /* CocoaCollab.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CocoaCollab.icns; sourceTree = "<group>"; };
+		ADEE55110DAE905E004B9C46 /* CocoaCollab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CocoaCollab.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				ADEE54BD0DADFD73004B9C46 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +135,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADEE54BC0DADFD73004B9C46 /* Sparkle.framework */,
 				AD032D830DA174800039A853 /* OCMock.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
@@ -167,6 +189,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ADEE55110DAE905E004B9C46 /* CocoaCollab.png */,
+				ADEE55080DAE8D94004B9C46 /* CocoaCollab.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
@@ -267,6 +291,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				ADEE54D80DADFDC4004B9C46 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -323,6 +348,8 @@
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				ADD8B7440DA9A20500C3528E /* CocoaCollab.sdef in Resources */,
+				ADEE55270DAE9365004B9C46 /* CocoaCollab.png in Resources */,
+				ADEE55280DAE9379004B9C46 /* CocoaCollab.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +496,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -487,6 +518,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CocoaCollab_Prefix.pch;

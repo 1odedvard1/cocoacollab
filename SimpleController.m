@@ -56,12 +56,14 @@
 {
   //[self connect:nil];
   
-  NSStatusBar* bar = [NSStatusBar systemStatusBar];
+  NSBundle* bundle = [NSBundle bundleForClass:[self class]];
+  NSString* path   = [bundle pathForResource:@"CocoaCollab" ofType:@"png"];
   
-  statusItem = [bar statusItemWithLength:NSVariableStatusItemLength];
-  [statusItem retain];
-  [statusItem setTitle:@"CocoaCollab"];
+  menuIcon = [[NSImage alloc] initWithContentsOfFile:path];
+  
+  statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
   [statusItem setToolTip:@"CocoaCollab!"];
+  [statusItem setImage:menuIcon];
 }
 
 - (void)dealloc
@@ -69,6 +71,7 @@
   [clients release];
   [socket release];
   [clientId release];
+  [menuIcon release];
   [super dealloc];
 }
 

@@ -22,6 +22,7 @@
   
   ClientList* clients;
   
+  NSImage* menuIcon;
   NSStatusItem* statusItem;
   
   IBOutlet NSTextField* inputText;
