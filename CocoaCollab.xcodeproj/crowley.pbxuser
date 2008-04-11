@@ -152,9 +152,9 @@
 	};
 	AD032EBB0DA1C8820039A853 /* SimpleController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {790, 4844}}";
-			sepNavSelRange = "{1889, 0}";
-			sepNavVisRange = "{1171, 1108}";
+			sepNavIntBoundsRect = "{{0, 0}, {790, 4718}}";
+			sepNavSelRange = "{1663, 0}";
+			sepNavVisRange = "{1303, 1129}";
 			sepNavWindowFrame = "{{483, 78}, {849, 757}}";
 		};
 	};
@@ -320,7 +320,7 @@
 			sepNavWindowFrame = "{{40, 70}, {761, 732}}";
 		};
 	};
-	ADD88EF40DAEF28B00A7E7A9 /* default.txt */ = {
+	ADD88EF40DAEF28B00A7E7A9 /* default.html */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {710, 596}}";
 			sepNavSelRange = "{14, 0}";
@@ -353,7 +353,7 @@
 		fRef = AD032EBB0DA1C8820039A853 /* SimpleController.m */;
 		name = "SimpleController.m: 58";
 		rLen = 0;
-		rLoc = 1815;
+		rLoc = 1816;
 		rType = 0;
 		vrLen = 855;
 		vrLoc = 1207;
@@ -373,7 +373,7 @@
 		fRef = AD032EBB0DA1C8820039A853 /* SimpleController.m */;
 		name = "SimpleController.m: 58";
 		rLen = 0;
-		rLoc = 1815;
+		rLoc = 1816;
 		rType = 0;
 		vrLen = 855;
 		vrLoc = 1207;
@@ -413,7 +413,7 @@
 		fRef = AD032EBB0DA1C8820039A853 /* SimpleController.m */;
 		name = "SimpleController.m: 66";
 		rLen = 0;
-		rLoc = 1773;
+		rLoc = 1774;
 		rType = 0;
 		vrLen = 1107;
 		vrLoc = 1171;
@@ -423,7 +423,7 @@
 		fRef = AD032EBB0DA1C8820039A853 /* SimpleController.m */;
 		name = "SimpleController.m: 66";
 		rLen = 0;
-		rLoc = 1773;
+		rLoc = 1774;
 		rType = 0;
 		vrLen = 1087;
 		vrLoc = 1171;
@@ -467,7 +467,7 @@
 		fRef = AD032EBB0DA1C8820039A853 /* SimpleController.m */;
 		name = "SimpleController.m: 69";
 		rLen = 0;
-		rLoc = 1794;
+		rLoc = 1795;
 		rType = 0;
 		vrLen = 1106;
 		vrLoc = 1171;
@@ -477,7 +477,7 @@
 		fRef = AD032EBB0DA1C8820039A853 /* SimpleController.m */;
 		name = "SimpleController.m: 69";
 		rLen = 0;
-		rLoc = 1889;
+		rLoc = 1890;
 		rType = 0;
 		vrLen = 1108;
 		vrLoc = 1171;

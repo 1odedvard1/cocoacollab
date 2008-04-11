@@ -61,7 +61,7 @@
   
   NSError* err = [[NSError alloc] init];
   
-  NSString* path    = [bundle pathForResource:@"default" ofType:@"txt"];
+  NSString* path    = [bundle pathForResource:@"default" ofType:@"html"];
   NSString* content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&err];
   
   [err release];

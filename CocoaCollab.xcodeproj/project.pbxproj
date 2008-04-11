@@ -18,7 +18,7 @@
 		AD66B65C0DA2B47700AC0B89 /* UPCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD66B65A0DA2B47700AC0B89 /* UPCMessage.m */; };
 		ADADD50F0DA04C0000874171 /* XMLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADADD50E0DA04C0000874171 /* XMLSocket.m */; };
 		ADD8385A0D93AA62007BCA95 /* NetSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD838580D93AA62007BCA95 /* NetSocket.m */; };
-		ADD88EF50DAEF28B00A7E7A9 /* default.txt in Resources */ = {isa = PBXBuildFile; fileRef = ADD88EF40DAEF28B00A7E7A9 /* default.txt */; };
+		ADD88EF50DAEF28B00A7E7A9 /* default.html in Resources */ = {isa = PBXBuildFile; fileRef = ADD88EF40DAEF28B00A7E7A9 /* default.html */; };
 		ADD8B7440DA9A20500C3528E /* CocoaCollab.sdef in Resources */ = {isa = PBXBuildFile; fileRef = ADD8B7430DA9A20500C3528E /* CocoaCollab.sdef */; };
 		ADD8B74C0DA9AB3E00C3528E /* Collab.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8B74B0DA9AB3E00C3528E /* Collab.m */; };
 		ADE283D50DA4E20D005D3B0A /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE283D20DA4E20D005D3B0A /* Client.m */; };
@@ -79,7 +79,7 @@
 		ADADD50E0DA04C0000874171 /* XMLSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLSocket.m; sourceTree = "<group>"; };
 		ADD838580D93AA62007BCA95 /* NetSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetSocket.m; sourceTree = "<group>"; };
 		ADD838590D93AA62007BCA95 /* NetSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetSocket.h; sourceTree = "<group>"; };
-		ADD88EF40DAEF28B00A7E7A9 /* default.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default.txt; sourceTree = "<group>"; };
+		ADD88EF40DAEF28B00A7E7A9 /* default.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = default.html; sourceTree = "<group>"; };
 		ADD8B7430DA9A20500C3528E /* CocoaCollab.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.sdef; path = CocoaCollab.sdef; sourceTree = "<group>"; };
 		ADD8B7470DA9A28400C3528E /* default.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = default.scpt; sourceTree = "<group>"; };
 		ADD8B74A0DA9AB3E00C3528E /* Collab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collab.h; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
-				ADD88EF40DAEF28B00A7E7A9 /* default.txt */,
+				ADD88EF40DAEF28B00A7E7A9 /* default.html */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -357,7 +357,7 @@
 				ADD8B7440DA9A20500C3528E /* CocoaCollab.sdef in Resources */,
 				ADEE55270DAE9365004B9C46 /* CocoaCollab.png in Resources */,
 				ADEE55280DAE9379004B9C46 /* CocoaCollab.icns in Resources */,
-				ADD88EF50DAEF28B00A7E7A9 /* default.txt in Resources */,
+				ADD88EF50DAEF28B00A7E7A9 /* default.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
