@@ -76,7 +76,8 @@
   statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
   [statusItem setToolTip:@"CocoaCollab!"];
   [statusItem setImage:menuIcon];
-   
+  //[statusItem setAction:@selector(toggleWindowVisibility:)];
+  
   [outputRenderer outputInfoMessage:@"Ready."];
 }
 
@@ -121,6 +122,16 @@
   [[self window] makeFirstResponder:inputText];
   
   [inputText setStringValue:@""];
+}
+
+- (IBAction)toggleWindowVisibility:(id)sender
+{
+  if ([[self window] isVisible]) {
+    [[self window] orderOut:nil];
+  }
+  else {
+    [[self window] makeKeyAndOrderFront:nil];
+  }
 }
 
 #pragma mark -
