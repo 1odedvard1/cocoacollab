@@ -13,6 +13,9 @@
 #import "Client.h"
 #import "ClientList.h"
 
+#import <WebKit/WebView.h>
+#import <WebKit/WebFrame.h>
+
 @interface SimpleController (Private)
 - (void)processIncomingXML:(NSXMLDocument*)pXML;
 - (void)sendPublicMessage:(NSString*)pMessage;
@@ -54,16 +57,25 @@
 
 - (void)awakeFromNib
 {
-  //[self connect:nil];
-  
   NSBundle* bundle = [NSBundle bundleForClass:[self class]];
-  NSString* path   = [bundle pathForResource:@"CocoaCollab" ofType:@"png"];
   
+  NSError* err = [[NSError alloc] init];
+  
+  NSString* path    = [bundle pathForResource:@"default" ofType:@"txt"];
+  NSString* content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&err];
+  
+  [err release];
+  
+  [[webView mainFrame] loadHTMLString:content baseURL:[NSURL URLWithString:@"http://localhost"]];
+  
+  path     = [bundle pathForResource:@"CocoaCollab" ofType:@"png"];
   menuIcon = [[NSImage alloc] initWithContentsOfFile:path];
   
   statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
   [statusItem setToolTip:@"CocoaCollab!"];
   [statusItem setImage:menuIcon];
+   
+   //[self connect:nil];
 }
 
 - (void)dealloc
@@ -158,14 +170,16 @@
 
 - (void)appendOutputText:(NSString*)text
 {
-  NSRange endRange;
-  endRange.location = [[outputText textStorage] length];
-  endRange.length   = 0;
+  //NSRange endRange;
+  //endRange.location = [[outputText textStorage] length];
+  //endRange.length   = 0;
   
-  NSString* output = [text stringByAppendingString:@"\n"];
+  //NSString* output = [text stringByAppendingString:@"\n"];
   
-  [outputText replaceCharactersInRange:endRange withString:output];
-  [outputText scrollRangeToVisible:endRange];
+  //[outputText replaceCharactersInRange:endRange withString:output];
+  //[outputText scrollRangeToVisible:endRange];
+  
+  
 }
 
 #pragma mark -

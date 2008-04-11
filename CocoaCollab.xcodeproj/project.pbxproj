@@ -13,10 +13,12 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		AD032D840DA174800039A853 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD032D830DA174800039A853 /* OCMock.framework */; };
 		AD032EBC0DA1C8820039A853 /* SimpleController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD032EBB0DA1C8820039A853 /* SimpleController.m */; };
+		AD34B7F20DAEE370000F0167 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD34B7F10DAEE370000F0167 /* WebKit.framework */; };
 		AD5F1FD00DA1720A00BB44B0 /* XMLSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5F1FCF0DA1720A00BB44B0 /* XMLSocketTests.m */; };
 		AD66B65C0DA2B47700AC0B89 /* UPCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD66B65A0DA2B47700AC0B89 /* UPCMessage.m */; };
 		ADADD50F0DA04C0000874171 /* XMLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADADD50E0DA04C0000874171 /* XMLSocket.m */; };
 		ADD8385A0D93AA62007BCA95 /* NetSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD838580D93AA62007BCA95 /* NetSocket.m */; };
+		ADD88EF50DAEF28B00A7E7A9 /* default.txt in Resources */ = {isa = PBXBuildFile; fileRef = ADD88EF40DAEF28B00A7E7A9 /* default.txt */; };
 		ADD8B7440DA9A20500C3528E /* CocoaCollab.sdef in Resources */ = {isa = PBXBuildFile; fileRef = ADD8B7430DA9A20500C3528E /* CocoaCollab.sdef */; };
 		ADD8B74C0DA9AB3E00C3528E /* Collab.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8B74B0DA9AB3E00C3528E /* Collab.m */; };
 		ADE283D50DA4E20D005D3B0A /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE283D20DA4E20D005D3B0A /* Client.m */; };
@@ -68,6 +70,7 @@
 		AD032D830DA174800039A853 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = /Library/Frameworks/OCMock.framework; sourceTree = "<absolute>"; };
 		AD032EBA0DA1C8820039A853 /* SimpleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleController.h; sourceTree = "<group>"; };
 		AD032EBB0DA1C8820039A853 /* SimpleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleController.m; sourceTree = "<group>"; };
+		AD34B7F10DAEE370000F0167 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		AD5F1FCE0DA1720A00BB44B0 /* XMLSocketTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLSocketTests.h; sourceTree = "<group>"; };
 		AD5F1FCF0DA1720A00BB44B0 /* XMLSocketTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLSocketTests.m; sourceTree = "<group>"; };
 		AD66B65A0DA2B47700AC0B89 /* UPCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPCMessage.m; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 		ADADD50E0DA04C0000874171 /* XMLSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLSocket.m; sourceTree = "<group>"; };
 		ADD838580D93AA62007BCA95 /* NetSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetSocket.m; sourceTree = "<group>"; };
 		ADD838590D93AA62007BCA95 /* NetSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetSocket.h; sourceTree = "<group>"; };
+		ADD88EF40DAEF28B00A7E7A9 /* default.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default.txt; sourceTree = "<group>"; };
 		ADD8B7430DA9A20500C3528E /* CocoaCollab.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.sdef; path = CocoaCollab.sdef; sourceTree = "<group>"; };
 		ADD8B7470DA9A28400C3528E /* default.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = default.scpt; sourceTree = "<group>"; };
 		ADD8B74A0DA9AB3E00C3528E /* Collab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collab.h; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				ADEE54BD0DADFD73004B9C46 /* Sparkle.framework in Frameworks */,
+				AD34B7F20DAEE370000F0167 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,10 +183,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				ADD8B7430DA9A20500C3528E /* CocoaCollab.sdef */,
 				32CA4F630368D1EE00C91783 /* CocoaCollab_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
-				ADD8B7470DA9A28400C3528E /* default.scpt */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -189,11 +192,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ADD8B7430DA9A20500C3528E /* CocoaCollab.sdef */,
+				ADD8B7470DA9A28400C3528E /* default.scpt */,
 				ADEE55110DAE905E004B9C46 /* CocoaCollab.png */,
 				ADEE55080DAE8D94004B9C46 /* CocoaCollab.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				ADD88EF40DAEF28B00A7E7A9 /* default.txt */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD34B7F10DAEE370000F0167 /* WebKit.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -350,6 +357,7 @@
 				ADD8B7440DA9A20500C3528E /* CocoaCollab.sdef in Resources */,
 				ADEE55270DAE9365004B9C46 /* CocoaCollab.png in Resources */,
 				ADEE55280DAE9379004B9C46 /* CocoaCollab.icns in Resources */,
+				ADD88EF50DAEF28B00A7E7A9 /* default.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,7 @@
 @class XMLSocket;
 @class NetSocket;
 @class ClientList;
+@class WebView;
 
 @interface SimpleController : NSWindowController {
   NSString* clientId;
@@ -28,6 +29,7 @@
   IBOutlet NSTextField* inputText;
   IBOutlet NSTextView* outputText;
   IBOutlet NSTableView* usersTable;
+  IBOutlet WebView* webView;
 }
 
 - (id)init;
