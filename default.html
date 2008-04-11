@@ -7,13 +7,52 @@
     }
     
     p {
-      padding: 0;
+      padding: 2px;
       margin: 0;
     }
     
     div {
       padding: 0;
       margin: 0;
+    }
+    
+    p.msg_info {
+      color: #0000CC;
+      background-color: #EFEFEF;
+    }
+    
+    p.msg_join {
+      color: #000033;
+      background-color: #EFEFEF;
+    }
+    
+    p.msg_leave {
+      color: #000033;
+      background-color: #EFEFEF;
+    }
+    
+    p.msg_self {
+      color: #660000;
+    }
+    
+    p.msg_public {
+    }
+    
+    p.msg_kick {
+      color: #CC0000;
+      background-color: #EFEFEF;
+    }
+    
+    p.msg_action {
+      color: #00CC00;
+    }
+    
+    span.sender {
+      font-weight: bold;
+    }
+    
+    span.recipient {
+      font-weight: bold;
     }
   </style>
 </head>
@@ -25,10 +64,10 @@
 <p class="msg_self"><span class="sender">cliffstah:</span> <span class="message">Hello!</span></p>
 <p class="msg_join"><span class="sender">Kintay</span> <span class="message">joined.</span></p>
 <p class="msg_self"><span class="sender">cliffstah:</span> <span class="message">Hoi thomasaurus!</span></p>
-<p class="msg_public"><span class="sender">Kintay:</span> <span class="message">Give me bumsex!</span></p>
+<p class="msg_public"><span class="sender">Kintay:</span> <span class="message">Fire in the hole!</span></p>
 <p class="msg_kick"><span class="recipient">inkoddi</span> <span class="message">was kicked by</span> <span class="sender">Kintay</span></p>
 <p class="msg_action"><span class="sender">Kintay</span> <span class="message">chuckles</span></p>
-<p class="msg_public"><span class="sender">Kintay</span> <span class="message">has left.</span></p>
+<p class="msg_leave"><span class="sender">Kintay</span> <span class="message">has left.</span></p>
 </div>
 
 </body>
