@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>ADD88F6D0DAFFCE200A7E7A9</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>default.html</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>ADD88F6E0DAFFCE200A7E7A9</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>default.html</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>ADD88F7D0DAFFE9F00A7E7A9</string>
+						<key>history</key>
+						<array>
+							<string>ADD88F6B0DAFFCC100A7E7A9</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1074, 627}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>137 138 1074 668 0 0 1440 878 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -527,6 +568,7 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>ADD8386C0D93B074007BCA95</string>
 		<string>/Users/crowley/Work/Personal/Cocoa/CocoaCollab/CocoaCollab.xcodeproj</string>
+		<string>ADD88F6D0DAFFCE200A7E7A9</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 61 723 483 0 0 1440 878 </string>
