@@ -65,6 +65,7 @@
 - (void)writeElement:(DOMElement*)elem
 {
   [[[self document] getElementById:@"main"] appendChild:elem];
+  [webView scrollPageUp:nil];
 }
 
 @end
