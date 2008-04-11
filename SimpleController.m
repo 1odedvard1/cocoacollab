@@ -76,8 +76,6 @@
   [statusItem setToolTip:@"CocoaCollab!"];
   [statusItem setImage:menuIcon];
    
-   //[self connect:nil];
-  
   [self appendOutputText:@"Ready."];
 }
 
@@ -173,15 +171,6 @@
 
 - (void)appendOutputText:(NSString*)text
 {
-  //NSRange endRange;
-  //endRange.location = [[outputText textStorage] length];
-  //endRange.length   = 0;
-  
-  //NSString* output = [text stringByAppendingString:@"\n"];
-  
-  //[outputText replaceCharactersInRange:endRange withString:output];
-  //[outputText scrollRangeToVisible:endRange];
-  
   DOMDocument* doc = [[webView mainFrame] DOMDocument];
   
   DOMElement* elem = [doc createElement:@"p"];
