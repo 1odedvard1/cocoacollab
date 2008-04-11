@@ -257,18 +257,18 @@
 	};
 	AD032EBA0DA1C8820039A853 /* SimpleController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {790, 672}}";
-			sepNavSelRange = "{869, 0}";
-			sepNavVisRange = "{42, 827}";
-			sepNavWindowFrame = "{{358, 44}, {849, 757}}";
+			sepNavIntBoundsRect = "{{0, 0}, {790, 658}}";
+			sepNavSelRange = "{509, 0}";
+			sepNavVisRange = "{26, 808}";
+			sepNavWindowFrame = "{{520, 89}, {849, 757}}";
 		};
 	};
 	AD032EBB0DA1C8820039A853 /* SimpleController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {884, 4662}}";
-			sepNavSelRange = "{7789, 0}";
-			sepNavVisRange = "{7218, 1132}";
-			sepNavWindowFrame = "{{15, 78}, {849, 757}}";
+			sepNavIntBoundsRect = "{{0, 0}, {874, 4578}}";
+			sepNavSelRange = "{8356, 0}";
+			sepNavVisRange = "{1337, 518}";
+			sepNavWindowFrame = "{{520, 89}, {849, 757}}";
 		};
 	};
 	AD0330110DA23D050039A853 /* XMLSocket.m:57 */ = {
@@ -1190,9 +1190,9 @@
 	ADD88FAF0DB0099C00A7E7A9 /* OutputRenderer.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {676, 610}}";
-			sepNavSelRange = "{186, 0}";
+			sepNavSelRange = "{404, 0}";
 			sepNavVisRange = "{0, 778}";
-			sepNavWindowFrame = "{{61, 93}, {735, 738}}";
+			sepNavWindowFrame = "{{17, 65}, {735, 738}}";
 		};
 	};
 	ADD88FB00DB0099C00A7E7A9 /* OutputRenderer.m */ = {
@@ -1557,7 +1557,7 @@
 		isa = PBXTextBookmark;
 		fRef = AD032EBA0DA1C8820039A853 /* SimpleController.h */;
 		rLen = 0;
-		rLoc = 2147483605;
+		rLoc = 834;
 		rType = 0;
 	};
 	ADD88FEF0DB00CEF00A7E7A9 /* PBXTextBookmark */ = {
@@ -1607,7 +1607,7 @@
 		rLen = 0;
 		rLoc = 454;
 		rType = 0;
-		vrLen = 832;
+		vrLen = 724;
 		vrLoc = 145;
 	};
 	ADD88FF50DB00D3800A7E7A9 /* PBXTextBookmark */ = {
@@ -1617,7 +1617,7 @@
 		rLen = 0;
 		rLoc = 454;
 		rType = 0;
-		vrLen = 808;
+		vrLen = 700;
 		vrLoc = 169;
 	};
 	ADD88FF60DB00D3800A7E7A9 /* PBXTextBookmark */ = {
@@ -1637,7 +1637,7 @@
 		rLen = 0;
 		rLoc = 454;
 		rType = 0;
-		vrLen = 832;
+		vrLen = 724;
 		vrLoc = 145;
 	};
 	ADD88FF80DB00D3800A7E7A9 /* PBXTextBookmark */ = {
@@ -1655,7 +1655,7 @@
 		fRef = AD032EBA0DA1C8820039A853 /* SimpleController.h */;
 		name = "SimpleController.h: 48";
 		rLen = 0;
-		rLoc = 869;
+		rLoc = 834;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 42;
