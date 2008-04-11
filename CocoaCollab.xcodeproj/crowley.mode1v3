@@ -197,7 +197,88 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>ADD88F350DAEFA3600A7E7A9</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>SimpleController.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>ADD88F360DAEFA3600A7E7A9</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>SimpleController.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>ADD88F4B0DAEFD9100A7E7A9</string>
+						<key>history</key>
+						<array>
+							<string>ADD88F2F0DAEF89B00A7E7A9</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {849, 660}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>483 134 849 701 0 0 1440 878 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>ADD88F420DAEFD2800A7E7A9</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>default.html</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>ADD88F430DAEFD2800A7E7A9</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>default.html</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>ADD88F4C0DAEFD9100A7E7A9</string>
+						<key>history</key>
+						<array>
+							<string>ADD88F3C0DAEFC3800A7E7A9</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {769, 627}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>137 138 769 668 0 0 1440 878 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -517,7 +598,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>ADD88F2C0DAEF86A00A7E7A9</string>
 		<string>ADD88F240DAEF67900A7E7A9</string>
 		<string>ADD88F1F0DAEF5EF00A7E7A9</string>
 		<string>ADD88F090DAEF46E00A7E7A9</string>
@@ -528,6 +608,8 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>ADD8386C0D93B074007BCA95</string>
 		<string>/Users/crowley/Work/Personal/Cocoa/CocoaCollab/CocoaCollab.xcodeproj</string>
+		<string>ADD88F420DAEFD2800A7E7A9</string>
+		<string>ADD88F350DAEFA3600A7E7A9</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 61 723 483 0 0 1440 878 </string>

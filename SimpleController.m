@@ -15,6 +15,7 @@
 
 #import <WebKit/WebView.h>
 #import <WebKit/WebFrame.h>
+#import <WebKit/DOMExtensions.h>
 
 @interface SimpleController (Private)
 - (void)processIncomingXML:(NSXMLDocument*)pXML;
@@ -76,6 +77,8 @@
   [statusItem setImage:menuIcon];
    
    //[self connect:nil];
+  
+  [self appendOutputText:@"Ready."];
 }
 
 - (void)dealloc
@@ -179,7 +182,14 @@
   //[outputText replaceCharactersInRange:endRange withString:output];
   //[outputText scrollRangeToVisible:endRange];
   
+  DOMDocument* doc = [[webView mainFrame] DOMDocument];
   
+  DOMElement* elem = [doc createElement:@"p"];
+  DOMText* content = [doc createTextNode:text];
+  
+  [elem appendChild:content];
+  
+  [[doc getElementById:@"main"] appendChild:elem];
 }
 
 #pragma mark -
