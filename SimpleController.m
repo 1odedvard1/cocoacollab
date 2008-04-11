@@ -12,6 +12,7 @@
 #import "UPCMessage.h"
 #import "Client.h"
 #import "ClientList.h"
+#import "OutputRenderer.h"
 
 #import <WebKit/WebView.h>
 #import <WebKit/WebFrame.h>
@@ -76,7 +77,7 @@
   [statusItem setToolTip:@"CocoaCollab!"];
   [statusItem setImage:menuIcon];
    
-  [self appendOutputText:@"Ready."];
+  [outputRenderer outputInfoMessage:@"Ready."];
 }
 
 - (void)dealloc
@@ -95,12 +96,12 @@
   [socket open];
   [socket connectToHost:DEFAULT_HOST port:DEFAULT_PORT timeout:10];
   [socket scheduleOnCurrentRunLoop];
-  [self appendOutputText:@"Connecting.."];
+  [outputRenderer outputInfoMessage:@"Connecting.."];
 }
 
 - (IBAction)disconnect:(id)sender
 {
-  [self appendOutputText:@"Disconnecting.."];
+  [outputRenderer outputInfoMessage:@"Disconnecting.."];
   [socket close];
 }
 
@@ -114,7 +115,7 @@
   Client* client = [clients getClient:clientId];
   
   if (client) {
-    [self appendOutputText:[NSString stringWithFormat:@"%@: %@", [client username], input]];
+    [outputRenderer outputInfoMessage:[NSString stringWithFormat:@"%@: %@", [client username], input]];
   }
   
   [[self window] makeFirstResponder:inputText];
@@ -126,17 +127,17 @@
 
 - (void)netsocketConnected:(NetSocket*)pSocket
 {
-  [self appendOutputText:@"Connected."];
+  [outputRenderer outputInfoMessage:@"Connected."];
 }
 
 - (void)netsocket:(NetSocket*)pSocket connectionTimedOut:(NSTimeInterval*)pTimeout
 {
-  [self appendOutputText:@"Timed out."];
+  [outputRenderer outputInfoMessage:@"Timed out."];
 }
 
 - (void)netsocketDisconnected:(NetSocket*)pSocket
 {
-  [self appendOutputText:@"Disconnected."];
+  [outputRenderer outputInfoMessage:@"Disconnected."];
 }
 
 - (void)xmlsocket:(XMLSocket*)pSocket xmlAvailable:(NSXMLDocument*)pXML
@@ -165,20 +166,6 @@
     [[UPCMessage alloc] initWithMethod:@"invokeOnRoom" withRoomId:@"unity" withArgs:@"displayMessage", @"collab.global", @"false", pMessage, nil];
   
   [socket sendXML:[message XMLDocument]];
-}
-
-#pragma mark -
-
-- (void)appendOutputText:(NSString*)text
-{
-  DOMDocument* doc = [[webView mainFrame] DOMDocument];
-  
-  DOMElement* elem = [doc createElement:@"p"];
-  DOMText* content = [doc createTextNode:text];
-  
-  [elem appendChild:content];
-  
-  [[doc getElementById:@"main"] appendChild:elem];
 }
 
 #pragma mark -
@@ -255,7 +242,7 @@
 
 - (void)handle_upcOnJoinRoom:(UPCMessage*)pMessage
 {
-  [self appendOutputText:@"Welcome to Collab!"];
+  [outputRenderer outputInfoMessage:@"Welcome to Collab!"];
   
   Client* client = [clients getClient:clientId];
   
@@ -279,7 +266,7 @@
   Client* client = [clients getClient:cid];
   
   if (client) {
-    [self appendOutputText:[NSString stringWithFormat:@"%@: %@", [client username], msg]];
+    [outputRenderer outputInfoMessage:[NSString stringWithFormat:@"%@: %@", [client username], msg]];
   }
 }
 
@@ -306,7 +293,7 @@
   Client* client = [clients getClient:cid];
   
   if (client) {
-    [self appendOutputText:[NSString stringWithFormat:@" * %@ %@", [client username], msg]];
+    [outputRenderer outputInfoMessage:[NSString stringWithFormat:@" * %@ %@", [client username], msg]];
   }
 }
 
@@ -314,7 +301,7 @@
 {
   NSString* msg = [[pMessage args] objectAtIndex:1];
   
-  [self appendOutputText:msg];
+  [outputRenderer outputInfoMessage:msg];
 }
 
 - (void)handle_upcOnRemoveClient:(UPCMessage*)pMessage
@@ -324,7 +311,7 @@
   Client* client = [clients getClient:cid];
   
   if (client) {
-    [self appendOutputText:[NSString stringWithFormat:@"%@ left.", [client username]]];
+    [outputRenderer outputInfoMessage:[NSString stringWithFormat:@"%@ left.", [client username]]];
   }
   
   [clients removeClient:cid];

@@ -15,6 +15,7 @@
 @class NetSocket;
 @class ClientList;
 @class WebView;
+@class OutputRenderer;
 
 @interface SimpleController : NSWindowController {
   NSString* clientId;
@@ -30,6 +31,7 @@
   IBOutlet NSTextView* outputText;
   IBOutlet NSTableView* usersTable;
   IBOutlet WebView* webView;
+  IBOutlet OutputRenderer* outputRenderer;
 }
 
 - (id)init;
@@ -42,10 +44,4 @@
 - (IBAction)disconnect:(id)sender;
 - (IBAction)processInput:(id)sender;
 
-@end
-
-#pragma mark -
-
-@interface SimpleController (UserInterface)
-- (void)appendOutputText:(NSString*)text;
 @end

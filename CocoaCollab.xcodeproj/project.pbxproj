@@ -19,6 +19,7 @@
 		ADADD50F0DA04C0000874171 /* XMLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADADD50E0DA04C0000874171 /* XMLSocket.m */; };
 		ADD8385A0D93AA62007BCA95 /* NetSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD838580D93AA62007BCA95 /* NetSocket.m */; };
 		ADD88EF50DAEF28B00A7E7A9 /* default.html in Resources */ = {isa = PBXBuildFile; fileRef = ADD88EF40DAEF28B00A7E7A9 /* default.html */; };
+		ADD88FB10DB0099C00A7E7A9 /* OutputRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD88FB00DB0099C00A7E7A9 /* OutputRenderer.m */; };
 		ADD8B7440DA9A20500C3528E /* CocoaCollab.sdef in Resources */ = {isa = PBXBuildFile; fileRef = ADD8B7430DA9A20500C3528E /* CocoaCollab.sdef */; };
 		ADD8B74C0DA9AB3E00C3528E /* Collab.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8B74B0DA9AB3E00C3528E /* Collab.m */; };
 		ADE283D50DA4E20D005D3B0A /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE283D20DA4E20D005D3B0A /* Client.m */; };
@@ -80,6 +81,8 @@
 		ADD838580D93AA62007BCA95 /* NetSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetSocket.m; sourceTree = "<group>"; };
 		ADD838590D93AA62007BCA95 /* NetSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetSocket.h; sourceTree = "<group>"; };
 		ADD88EF40DAEF28B00A7E7A9 /* default.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = default.html; sourceTree = "<group>"; };
+		ADD88FAF0DB0099C00A7E7A9 /* OutputRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputRenderer.h; sourceTree = "<group>"; };
+		ADD88FB00DB0099C00A7E7A9 /* OutputRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputRenderer.m; sourceTree = "<group>"; };
 		ADD8B7430DA9A20500C3528E /* CocoaCollab.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.sdef; path = CocoaCollab.sdef; sourceTree = "<group>"; };
 		ADD8B7470DA9A28400C3528E /* default.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = default.scpt; sourceTree = "<group>"; };
 		ADD8B74A0DA9AB3E00C3528E /* Collab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collab.h; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				ADADD5080DA0493B00874171 /* Util */,
 				AD032EBA0DA1C8820039A853 /* SimpleController.h */,
 				AD032EBB0DA1C8820039A853 /* SimpleController.m */,
+				ADD88FAF0DB0099C00A7E7A9 /* OutputRenderer.h */,
+				ADD88FB00DB0099C00A7E7A9 /* OutputRenderer.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 				ADE283D50DA4E20D005D3B0A /* Client.m in Sources */,
 				ADE283D60DA4E20D005D3B0A /* ClientList.m in Sources */,
 				ADD8B74C0DA9AB3E00C3528E /* Collab.m in Sources */,
+				ADD88FB10DB0099C00A7E7A9 /* OutputRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
