@@ -183,9 +183,9 @@
 	};
 	AD032EBB0DA1C8820039A853 /* SimpleController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {884, 4788}}";
-			sepNavSelRange = "{2282, 0}";
-			sepNavVisRange = "{7485, 1015}";
+			sepNavIntBoundsRect = "{{0, 0}, {874, 4620}}";
+			sepNavSelRange = "{1828, 0}";
+			sepNavVisRange = "{1477, 765}";
 			sepNavWindowFrame = "{{483, 78}, {849, 757}}";
 		};
 	};
@@ -353,8 +353,8 @@
 	};
 	ADD88EF40DAEF28B00A7E7A9 /* default.html */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {710, 573}}";
-			sepNavSelRange = "{110, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {710, 596}}";
+			sepNavSelRange = "{144, 0}";
 			sepNavVisRange = "{0, 219}";
 			sepNavWindowFrame = "{{137, 82}, {769, 724}}";
 		};
