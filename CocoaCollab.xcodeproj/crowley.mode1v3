@@ -231,6 +231,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -272,8 +274,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>8</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -331,18 +332,16 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {454, 0}}</string>
+								<string>{{0, 0}, {454, 437}}</string>
 								<key>RubberWindowFrame</key>
 								<string>6 62 723 483 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>437pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -353,14 +352,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 5}, {454, 437}}</string>
+								<string>{{0, 442}, {454, 0}}</string>
 								<key>RubberWindowFrame</key>
 								<string>6 62 723 483 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>437pt</string>
+							<string>0pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -379,9 +378,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>AD62E8850DB09EA200852E51</string>
+				<string>AD8650530DB161BB00F1C7A8</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>AD62E8860DB09EA200852E51</string>
+				<string>AD8650540DB161BB00F1C7A8</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -515,14 +514,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AD62E8EC0DB0A7B500852E51</string>
-		<string>AD62E8CE0DB0A40F00852E51</string>
-		<string>AD62E8C30DB0A2B500852E51</string>
-		<string>AD62E8C40DB0A2B500852E51</string>
-		<string>AD62E8C50DB0A2B500852E51</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>ADD8386C0D93B074007BCA95</string>
 		<string>/Users/crowley/Work/Personal/Cocoa/CocoaCollab/CocoaCollab.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
