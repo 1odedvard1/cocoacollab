@@ -299,9 +299,9 @@
 	};
 	AD032EBB0DA1C8820039A853 /* SimpleController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {848, 4648}}";
-			sepNavSelRange = "{2273, 0}";
-			sepNavVisRange = "{1835, 1161}";
+			sepNavIntBoundsRect = "{{0, 0}, {790, 4830}}";
+			sepNavSelRange = "{2850, 0}";
+			sepNavVisRange = "{2425, 969}";
 			sepNavWindowFrame = "{{520, 89}, {849, 757}}";
 		};
 	};
