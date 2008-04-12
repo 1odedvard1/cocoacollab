@@ -70,6 +70,8 @@
   [statusItem setToolTip:@"CocoaCollab!"];
   [statusItem setImage:menuIcon];
   //[statusItem setAction:@selector(toggleWindowVisibility:)];
+  
+  [outputRenderer clear];
 }
 
 - (void)dealloc
