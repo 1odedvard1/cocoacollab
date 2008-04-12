@@ -27,4 +27,6 @@
 - (void)renderJoinMessage:(Client*)sender;
 - (void)renderQuitMessage:(Client*)sender;
 
+- (void)clear;
+
 @end

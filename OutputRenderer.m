@@ -120,4 +120,20 @@
   [body setValue:[body valueForKey:@"scrollHeight"] forKey:@"scrollTop"];
 }
 
+#pragma mark -
+
+- (void)clear
+{
+  NSBundle* bundle = [NSBundle bundleForClass:[self class]];
+  
+  NSError* err = [[NSError alloc] init];
+  
+  NSString* path    = [bundle pathForResource:@"default" ofType:@"html"];
+  NSString* content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&err];
+  
+  [err release];
+  
+  [[webView mainFrame] loadHTMLString:content baseURL:[NSURL URLWithString:@"http://localhost"]];
+}
+
 @end

@@ -63,16 +63,7 @@
 {
   NSBundle* bundle = [NSBundle bundleForClass:[self class]];
   
-  NSError* err = [[NSError alloc] init];
-  
-  NSString* path    = [bundle pathForResource:@"default" ofType:@"html"];
-  NSString* content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&err];
-  
-  [err release];
-  
-  [[webView mainFrame] loadHTMLString:content baseURL:[NSURL URLWithString:@"http://localhost"]];
-  
-  path     = [bundle pathForResource:@"CocoaCollab" ofType:@"png"];
+  NSString* path = [bundle pathForResource:@"CocoaCollab" ofType:@"png"];
   menuIcon = [[NSImage alloc] initWithContentsOfFile:path];
   
   statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
