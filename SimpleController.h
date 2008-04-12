@@ -45,5 +45,6 @@
 - (IBAction)disconnect:(id)sender;
 - (IBAction)processInput:(id)sender;
 - (IBAction)toggleWindowVisibility:(id)sender;
+- (IBAction)clearOutput:(id)sender;
 
 @end

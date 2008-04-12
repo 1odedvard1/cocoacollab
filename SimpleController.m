@@ -127,6 +127,11 @@
   }
 }
 
+- (IBAction)clearOutput:(id)sender
+{
+  [outputRenderer clear];
+}
+
 #pragma mark -
 
 - (void)netsocketConnected:(NetSocket*)pSocket

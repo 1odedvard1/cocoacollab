@@ -21,8 +21,8 @@
 			AD64EABC0D9B18BC005EF01D /* Client.m:95 */,
 			AD0330110DA23D050039A853 /* XMLSocket.m:57 */,
 			ADE285430DA5C399005D3B0A /* NullTerminatedTokenBuffer.m:29 */,
-			ADD88F490DAEFD6F00A7E7A9 /* SimpleController.m:175 */,
-			AD62E8B80DB0A1F400852E51 /* SimpleController.m:315 */,
+			ADD88F490DAEFD6F00A7E7A9 /* SimpleController.m:180 */,
+			AD62E8B80DB0A1F400852E51 /* SimpleController.m:320 */,
 		);
 		codeSenseManager = ADD838560D93AA32007BCA95 /* Code sense */;
 		executables = (
@@ -118,6 +118,14 @@
 			AD86506D0DB163B100F1C7A8 /* PBXTextBookmark */ = AD86506D0DB163B100F1C7A8 /* PBXTextBookmark */;
 			AD86506F0DB163FC00F1C7A8 /* PBXTextBookmark */ = AD86506F0DB163FC00F1C7A8 /* PBXTextBookmark */;
 			AD8650700DB163FC00F1C7A8 /* PBXTextBookmark */ = AD8650700DB163FC00F1C7A8 /* PBXTextBookmark */;
+			AD8650710DB1644400F1C7A8 /* PBXTextBookmark */ = AD8650710DB1644400F1C7A8 /* PBXTextBookmark */;
+			AD8650720DB1644400F1C7A8 /* PBXTextBookmark */ = AD8650720DB1644400F1C7A8 /* PBXTextBookmark */;
+			AD8650730DB1644400F1C7A8 /* PBXTextBookmark */ = AD8650730DB1644400F1C7A8 /* PBXTextBookmark */;
+			AD8650740DB1644400F1C7A8 /* PBXTextBookmark */ = AD8650740DB1644400F1C7A8 /* PBXTextBookmark */;
+			AD8650770DB1646500F1C7A8 /* PBXTextBookmark */ = AD8650770DB1646500F1C7A8 /* PBXTextBookmark */;
+			AD8650780DB1646500F1C7A8 /* PBXTextBookmark */ = AD8650780DB1646500F1C7A8 /* PBXTextBookmark */;
+			AD8650790DB1646500F1C7A8 /* PBXTextBookmark */ = AD8650790DB1646500F1C7A8 /* PBXTextBookmark */;
+			AD86507A0DB1646500F1C7A8 /* PBXTextBookmark */ = AD86507A0DB1646500F1C7A8 /* PBXTextBookmark */;
 		};
 		sourceControlManager = ADD838550D93AA32007BCA95 /* Source Control */;
 		userBuildSettings = {
@@ -147,17 +155,17 @@
 	};
 	AD032EBA0DA1C8820039A853 /* SimpleController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {790, 700}}";
-			sepNavSelRange = "{922, 0}";
-			sepNavVisRange = "{88, 834}";
+			sepNavIntBoundsRect = "{{0, 0}, {790, 714}}";
+			sepNavSelRange = "{916, 35}";
+			sepNavVisRange = "{88, 870}";
 			sepNavWindowFrame = "{{520, 89}, {849, 757}}";
 		};
 	};
 	AD032EBB0DA1C8820039A853 /* SimpleController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {790, 4886}}";
-			sepNavSelRange = "{2042, 0}";
-			sepNavVisRange = "{1542, 1038}";
+			sepNavIntBoundsRect = "{{0, 0}, {790, 5054}}";
+			sepNavSelRange = "{3129, 0}";
+			sepNavVisRange = "{2787, 865}";
 			sepNavWindowFrame = "{{489, 70}, {849, 757}}";
 		};
 	};
@@ -194,7 +202,7 @@
 			sepNavWindowFrame = "{{515, 51}, {849, 757}}";
 		};
 	};
-	AD62E8B80DB0A1F400852E51 /* SimpleController.m:315 */ = {
+	AD62E8B80DB0A1F400852E51 /* SimpleController.m:320 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -206,7 +214,7 @@
 		functionName = "-handle_joinMessage:";
 		hitCount = 1;
 		ignoreCount = 0;
-		lineNumber = 315;
+		lineNumber = 320;
 		location = CocoaCollab;
 		modificationTime = 229679902.456211;
 		state = 1;
@@ -274,7 +282,7 @@
 		fRef = AD032EBA0DA1C8820039A853 /* SimpleController.h */;
 		name = "SimpleController.h: 50";
 		rLen = 0;
-		rLoc = 922;
+		rLoc = 958;
 		rType = 0;
 		vrLen = 834;
 		vrLoc = 88;
@@ -304,7 +312,7 @@
 		fRef = AD032EBA0DA1C8820039A853 /* SimpleController.h */;
 		name = "SimpleController.h: 50";
 		rLen = 0;
-		rLoc = 922;
+		rLoc = 958;
 		rType = 0;
 		vrLen = 834;
 		vrLoc = 88;
@@ -409,6 +417,86 @@
 		vrLen = 1191;
 		vrLoc = 2741;
 	};
+	AD8650710DB1644400F1C7A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD032EBB0DA1C8820039A853 /* SimpleController.m */;
+		name = "SimpleController.m: 74";
+		rLen = 0;
+		rLoc = 2042;
+		rType = 0;
+		vrLen = 865;
+		vrLoc = 2017;
+	};
+	AD8650720DB1644400F1C7A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD032EBB0DA1C8820039A853 /* SimpleController.m */;
+		name = "SimpleController.m: 74";
+		rLen = 0;
+		rLoc = 2042;
+		rType = 0;
+		vrLen = 865;
+		vrLoc = 2017;
+	};
+	AD8650730DB1644400F1C7A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD032EBA0DA1C8820039A853 /* SimpleController.h */;
+		name = "SimpleController.h: 48";
+		rLen = 0;
+		rLoc = 951;
+		rType = 0;
+		vrLen = 870;
+		vrLoc = 88;
+	};
+	AD8650740DB1644400F1C7A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ADD88FB00DB0099C00A7E7A9 /* OutputRenderer.m */;
+		name = "OutputRenderer.m: 136";
+		rLen = 0;
+		rLoc = 3842;
+		rType = 0;
+		vrLen = 1191;
+		vrLoc = 2741;
+	};
+	AD8650770DB1646500F1C7A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD032EBA0DA1C8820039A853 /* SimpleController.h */;
+		name = "SimpleController.h: 48";
+		rLen = 35;
+		rLoc = 916;
+		rType = 0;
+		vrLen = 870;
+		vrLoc = 88;
+	};
+	AD8650780DB1646500F1C7A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD032EBA0DA1C8820039A853 /* SimpleController.h */;
+		name = "SimpleController.h: 48";
+		rLen = 35;
+		rLoc = 916;
+		rType = 0;
+		vrLen = 870;
+		vrLoc = 88;
+	};
+	AD8650790DB1646500F1C7A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD032EBB0DA1C8820039A853 /* SimpleController.m */;
+		name = "SimpleController.m: 133";
+		rLen = 0;
+		rLoc = 3129;
+		rType = 0;
+		vrLen = 865;
+		vrLoc = 2787;
+	};
+	AD86507A0DB1646500F1C7A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ADD88FB00DB0099C00A7E7A9 /* OutputRenderer.m */;
+		name = "OutputRenderer.m: 136";
+		rLen = 0;
+		rLoc = 3842;
+		rType = 0;
+		vrLen = 1191;
+		vrLoc = 2741;
+	};
 	ADADD50D0DA04C0000874171 /* XMLSocket.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {786, 597}}";
@@ -488,7 +576,7 @@
 			sepNavWindowFrame = "{{282, 94}, {1074, 724}}";
 		};
 	};
-	ADD88F490DAEFD6F00A7E7A9 /* SimpleController.m:175 */ = {
+	ADD88F490DAEFD6F00A7E7A9 /* SimpleController.m:180 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -500,7 +588,7 @@
 		functionName = "-appendOutputText:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 175;
+		lineNumber = 180;
 		modificationTime = 229679886.916849;
 		state = 2;
 	};
