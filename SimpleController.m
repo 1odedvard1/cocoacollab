@@ -247,6 +247,8 @@
     [client setAttribute:key withValue:val];
   }
   
+  [usersTable reloadData];
+  
   NSLog(@"%@: '%@' -> '%@'", cid, key, val);
 }
 
@@ -265,6 +267,8 @@
     [socket sendXML:[joinMessage XMLDocument]];
     
     [joinMessage release];
+    
+    [outputRenderer renderJoinMessage:client];
   }
 }
 
@@ -310,8 +314,19 @@
 - (void)handle_joinMessage:(UPCMessage*)pMessage
 {
   NSString* cid = [[pMessage args] objectAtIndex:0];
+  NSString* msg = [[pMessage args] objectAtIndex:1];
+  
   Client* client = [clients getClient:cid];
-  [outputRenderer renderJoinMessage:client];
+  
+  /* Nasty but nescessary hack due to flaw in Collab protocol */
+  if ([msg length] > 25 && [[msg substringToIndex:25] isEqualToString:@"<font color=\"#B1661D\"><b>"]) {
+    int start = 25 + [[client username] length] + 16;
+    int end   = [msg length] - 7 - start;
+    [outputRenderer renderPrivateMessage:[msg substringWithRange:NSMakeRange(start, end)] sender:client];
+  }
+  else {
+    [outputRenderer renderJoinMessage:client];
+  }
 }
 
 - (void)handle_upcOnRemoveClient:(UPCMessage*)pMessage

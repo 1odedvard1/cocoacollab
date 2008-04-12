@@ -51,24 +51,34 @@
 
 - (void)renderPrivateMessage:(NSString*)message sender:(Client*)sender
 {
-  /* @todo */
+  DOMElement* p = [self createElement:@"p" withClass:@"msg_private"];
+  
+  [p appendChild:[[self document] createTextNode:@" - ("]];
+  
+  DOMElement* s = [self createElement:@"span" withClass:@"sender"];
+  [s appendChild:[[self document] createTextNode:[sender username]]];
+  [p appendChild:s];
+  
+  [p appendChild:[[self document] createTextNode:[NSString stringWithFormat:@") %@", message]]];
+  
+  [self writeElement:p];
 }
 
 - (void)renderActionMessage:(NSString*)message sender:(Client*)sender
 {
-  NSString* text = [NSString stringWithFormat:@"%@ joined.", [sender username]];
+  NSString* text = [NSString stringWithFormat:@"* %@ %@.", [sender username], message];
   [self writeElement:[self createElement:@"p" withContent:text withClass:@"msg_action"]];
 }
 
 - (void)renderJoinMessage:(Client*)sender
 {
-  NSString* message = [NSString stringWithFormat:@"%@ joined.", [sender username]];
+  NSString* message = [NSString stringWithFormat:@"-> %@ joined.", [sender username]];
   [self writeElement:[self createElement:@"p" withContent:message withClass:@"msg_join"]];
 }
 
 - (void)renderQuitMessage:(Client*)sender
 {
-  NSString* message = [NSString stringWithFormat:@"%@ left.", [sender username]];
+  NSString* message = [NSString stringWithFormat:@"<- %@ left.", [sender username]];
   [self writeElement:[self createElement:@"p" withContent:message withClass:@"msg_quit"]];
 }
 
