@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>ADD890640DB03DDD00A7E7A9</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>OutputRenderer.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>ADD890650DB03DDD00A7E7A9</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>OutputRenderer.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>ADD890660DB03DDD00A7E7A9</string>
+						<key>history</key>
+						<array>
+							<string>ADD890620DB03DD200A7E7A9</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {735, 641}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>567 131 735 682 0 0 1440 878 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -231,6 +272,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -273,7 +316,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
+									<integer>9</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
@@ -343,8 +386,6 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -517,7 +558,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>ADD8905E0DB020A300A7E7A9</string>
 		<string>ADE9E5A10D9F237E00CA3EA3</string>
 		<string>ADD88F240DAEF67900A7E7A9</string>
 		<string>ADD88F1F0DAEF5EF00A7E7A9</string>
@@ -529,6 +569,7 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>ADD8386C0D93B074007BCA95</string>
 		<string>/Users/crowley/Work/Personal/Cocoa/CocoaCollab/CocoaCollab.xcodeproj</string>
+		<string>ADD890640DB03DDD00A7E7A9</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 61 723 483 0 0 1440 878 </string>
