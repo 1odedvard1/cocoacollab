@@ -44,6 +44,8 @@
 
 @implementation SimpleController
 
+@synthesize clientId;
+
 - (id)init
 {
   self = [super init];
@@ -307,10 +309,9 @@
 
 - (void)handle_joinMessage:(UPCMessage*)pMessage
 {
-  NSString* msg = [[pMessage args] objectAtIndex:1];
-  
-  /* @todo get client */
-  //[outputRenderer renderJoinMessage:client];
+  NSString* cid = [[pMessage args] objectAtIndex:0];
+  Client* client = [clients getClient:cid];
+  [outputRenderer renderJoinMessage:client];
 }
 
 - (void)handle_upcOnRemoveClient:(UPCMessage*)pMessage

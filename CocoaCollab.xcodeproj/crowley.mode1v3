@@ -202,9 +202,57 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
+				<string>AD13057D0DB07BFF00763016</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>OutputRenderer.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>AD13057E0DB07BFF00763016</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>OutputRenderer.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>AD1305A30DB07E0C00763016</string>
+						<key>history</key>
+						<array>
+							<string>AD13059C0DB07D7500763016</string>
+							<string>AD13059D0DB07D7500763016</string>
+						</array>
+						<key>prevStack</key>
+						<array>
+							<string>AD1305810DB07BFF00763016</string>
+							<string>AD1305820DB07BFF00763016</string>
+							<string>AD13059E0DB07D7500763016</string>
+							<string>AD13059F0DB07D7500763016</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {735, 641}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>567 131 735 682 0 0 1440 878 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
 				<string>AD1305590DB0774400763016</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>SimpleController.m</string>
+				<string>SimpleController.h</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
@@ -212,19 +260,20 @@
 						<key>PBXProjectModuleGUID</key>
 						<string>AD13055A0DB0774400763016</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>SimpleController.m</string>
+						<string>SimpleController.h</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>AD13055E0DB0774400763016</string>
+						<string>AD1305A40DB07E0C00763016</string>
 						<key>history</key>
 						<array>
+							<string>AD13056C0DB07AB000763016</string>
 							<string>AD13055B0DB0774400763016</string>
-							<string>AD13055C0DB0774400763016</string>
 						</array>
 						<key>prevStack</key>
 						<array>
 							<string>AD13055D0DB0774400763016</string>
+							<string>AD13056D0DB07AB000763016</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -317,7 +366,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>4</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -560,11 +609,15 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>AD1305740DB07B8000763016</string>
+		<string>AD1305750DB07B8000763016</string>
+		<string>AD1305760DB07B8000763016</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>ADD8386C0D93B074007BCA95</string>
-		<string>/Users/crowley/Work/Personal/Cocoa/CocoaCollab/CocoaCollab.xcodeproj</string>
 		<string>AD1305590DB0774400763016</string>
+		<string>/Users/crowley/Work/Personal/Cocoa/CocoaCollab/CocoaCollab.xcodeproj</string>
+		<string>AD13057D0DB07BFF00763016</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 61 723 483 0 0 1440 878 </string>
@@ -891,6 +944,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

@@ -35,11 +35,6 @@
   [attributes release];
 }
 
-- (NSString*)clientId
-{
-  return [self getAttribute:@"clientId"];
-}
-
 - (NSString*)username
 {
   if ([self hasAttribute:@"username"]) {

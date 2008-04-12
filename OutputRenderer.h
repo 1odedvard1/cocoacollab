@@ -9,14 +9,14 @@
 #import <Cocoa/Cocoa.h>
 
 @class UPCMessage;
-@class Collab;
+@class SimpleController;
 @class WebView;
 @class DOMDocument;
 @class DOMElement;
 @class Client;
 
 @interface OutputRenderer : NSObject {
-  IBOutlet Collab* collab;
+  IBOutlet SimpleController* controller;
   IBOutlet WebView* webView;
 }
 

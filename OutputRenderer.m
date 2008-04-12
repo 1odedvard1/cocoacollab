@@ -8,7 +8,7 @@
 
 #import "OutputRenderer.h"
 #import "UPCMessage.h"
-#import "Collab.h"
+#import "SimpleController.h"
 #import "Client.h"
 
 #import <WebKit/WebView.h>
@@ -36,14 +36,15 @@
 {
   DOMElement* p;
   
-  if ([[sender clientId] isEqualToString:[collab clientId]]) {
+  if ([[sender clientId] isEqualToString:[controller clientId]]) {
     p = [self createElement:@"p" withClass:@"msg_self"];
   }
   else {
     p = [self createElement:@"p" withClass:@"msg_public"];
   }
   
-  [p appendChild:[self createElement:@"span" withContent:[sender username] withClass:@"sender"]];
+  [p appendChild:[self createElement:@"span" withContent:[NSString stringWithFormat:@"%@: ", [sender username]] withClass:@"sender"]];
+  [p appendChild:[[self document] createTextNode:message]];
   
   [self writeElement:p];
 }

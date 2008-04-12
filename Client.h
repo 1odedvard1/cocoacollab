@@ -20,7 +20,6 @@
 - (id)init;
 - (id)initWithId:(NSString*)clientId;
 
-- (NSString*)clentId;
 - (NSString*)username;
 
 - (NSString*)getAttribute:(NSString*)name;

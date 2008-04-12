@@ -33,6 +33,8 @@
   IBOutlet OutputRenderer* outputRenderer;
 }
 
+@property(readonly) NSString* clientId;
+
 - (id)init;
 - (void)dealloc;
 - (void)awakeFromNib;
