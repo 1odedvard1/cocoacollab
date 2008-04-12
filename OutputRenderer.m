@@ -8,32 +8,70 @@
 
 #import "OutputRenderer.h"
 #import "UPCMessage.h"
+#import "Collab.h"
+#import "Client.h"
 
 #import <WebKit/WebView.h>
 #import <WebKit/WebFrame.h>
 #import <WebKit/DOMExtensions.h>
 
+@interface OutputRenderer (Private)
+- (DOMDocument*)document;
+
+- (DOMElement*)createElement:(NSString*)name;
+- (DOMElement*)createElement:(NSString*)name withClass:(NSString*)css;
+- (DOMElement*)createElement:(NSString*)name withContent:(NSString*)content withClass:(NSString*)css;
+
+- (void)writeElement:(DOMElement*)elem;
+@end
+
 @implementation OutputRenderer
 
-- (void)outputMessage:(UPCMessage*)message
-{
-  if ([@"upc" isEqualToString:[message method]]) {
-  }
-}
-
-- (void)outputInfoMessage:(NSString*)message
+- (void)renderInfoMessage:(NSString*)message
 {
   [self writeElement:[self createElement:@"p" withContent:message withClass:@"msg_info"]];
 }
 
-- (void)outputSelfMessage:(NSString*)message withUsername:(NSString*)username
+- (void)renderPublicMessage:(NSString*)message sender:(Client*)sender
 {
-  DOMElement* p = [self createElement:@"p" withClass:@"msg_self"];
-  DOMElement* s = [self createElement:@"span" withContent:username withClass:@"sender"];
-  [p appendChild:s];
+  DOMElement* p;
+  
+  if ([[sender clientId] isEqualToString:[collab clientId]]) {
+    p = [self createElement:@"p" withClass:@"msg_self"];
+  }
+  else {
+    p = [self createElement:@"p" withClass:@"msg_public"];
+  }
+  
+  [p appendChild:[self createElement:@"span" withContent:[sender username] withClass:@"sender"]];
   
   [self writeElement:p];
 }
+
+- (void)renderPrivateMessage:(NSString*)message sender:(Client*)sender
+{
+  /* @todo */
+}
+
+- (void)renderActionMessage:(NSString*)message sender:(Client*)sender
+{
+  NSString* text = [NSString stringWithFormat:@"%@ joined.", [sender username]];
+  [self writeElement:[self createElement:@"p" withContent:text withClass:@"msg_action"]];
+}
+
+- (void)renderJoinMessage:(Client*)sender
+{
+  NSString* message = [NSString stringWithFormat:@"%@ joined.", [sender username]];
+  [self writeElement:[self createElement:@"p" withContent:message withClass:@"msg_join"]];
+}
+
+- (void)renderQuitMessage:(Client*)sender
+{
+  NSString* message = [NSString stringWithFormat:@"%@ left.", [sender username]];
+  [self writeElement:[self createElement:@"p" withContent:message withClass:@"msg_quit"]];
+}
+
+#pragma mark -
 
 - (DOMDocument*)document
 {
@@ -65,7 +103,10 @@
 - (void)writeElement:(DOMElement*)elem
 {
   [[[self document] getElementById:@"main"] appendChild:elem];
-  [webView scrollPageDown:nil];
+  
+  /* @todo fix this warning.. */
+  DOMHTMLBodyElement* body = [[[webView mainFrame] DOMDocument] body];
+  [body setValue:[body valueForKey:@"scrollHeight"] forKey:@"scrollTop"];
 }
 
 @end

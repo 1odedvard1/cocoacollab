@@ -9,25 +9,22 @@
 #import <Cocoa/Cocoa.h>
 
 @class UPCMessage;
+@class Collab;
 @class WebView;
 @class DOMDocument;
 @class DOMElement;
+@class Client;
 
 @interface OutputRenderer : NSObject {
+  IBOutlet Collab* collab;
   IBOutlet WebView* webView;
 }
 
-- (void)outputMessage:(UPCMessage*)message;
-
-- (void)outputInfoMessage:(NSString*)message;
-- (void)outputSelfMessage:(NSString*)message withUsername:(NSString*)username;
-
-- (DOMDocument*)document;
-
-- (DOMElement*)createElement:(NSString*)name;
-- (DOMElement*)createElement:(NSString*)name withClass:(NSString*)css;
-- (DOMElement*)createElement:(NSString*)name withContent:(NSString*)content withClass:(NSString*)css;
-
-- (void)writeElement:(DOMElement*)elem;
+- (void)renderInfoMessage:(NSString*)message;
+- (void)renderPublicMessage:(NSString*)message sender:(Client*)sender;
+- (void)renderPrivateMessage:(NSString*)message sender:(Client*)sender;
+- (void)renderActionMessage:(NSString*)message sender:(Client*)sender;
+- (void)renderJoinMessage:(Client*)sender;
+- (void)renderQuitMessage:(Client*)sender;
 
 @end

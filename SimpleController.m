@@ -77,8 +77,6 @@
   [statusItem setToolTip:@"CocoaCollab!"];
   [statusItem setImage:menuIcon];
   //[statusItem setAction:@selector(toggleWindowVisibility:)];
-  
-  [outputRenderer outputInfoMessage:@"Ready."];
 }
 
 - (void)dealloc
@@ -97,12 +95,12 @@
   [socket open];
   [socket connectToHost:DEFAULT_HOST port:DEFAULT_PORT timeout:10];
   [socket scheduleOnCurrentRunLoop];
-  [outputRenderer outputInfoMessage:@"Connecting.."];
+  [outputRenderer renderInfoMessage:@"Connecting.."];
 }
 
 - (IBAction)disconnect:(id)sender
 {
-  [outputRenderer outputInfoMessage:@"Disconnecting.."];
+  [outputRenderer renderInfoMessage:@"Disconnecting.."];
   [socket close];
 }
 
@@ -116,7 +114,7 @@
   Client* client = [clients getClient:clientId];
   
   if (client) {
-    [outputRenderer outputInfoMessage:[NSString stringWithFormat:@"%@: %@", [client username], input]];
+    [outputRenderer renderPublicMessage:input sender:client];
   }
   
   [[self window] makeFirstResponder:inputText];
@@ -138,17 +136,17 @@
 
 - (void)netsocketConnected:(NetSocket*)pSocket
 {
-  [outputRenderer outputInfoMessage:@"Connected."];
+  [outputRenderer renderInfoMessage:@"Connected."];
 }
 
 - (void)netsocket:(NetSocket*)pSocket connectionTimedOut:(NSTimeInterval*)pTimeout
 {
-  [outputRenderer outputInfoMessage:@"Timed out."];
+  [outputRenderer renderInfoMessage:@"Timed out."];
 }
 
 - (void)netsocketDisconnected:(NetSocket*)pSocket
 {
-  [outputRenderer outputInfoMessage:@"Disconnected."];
+  [outputRenderer renderInfoMessage:@"Disconnected."];
 }
 
 - (void)xmlsocket:(XMLSocket*)pSocket xmlAvailable:(NSXMLDocument*)pXML
@@ -185,7 +183,7 @@
 {
   UPCMessage* message = [UPCMessage fromXMLDocument:pXML];
   if (message) {
-    NSString* selectorName = [[NSString alloc] initWithFormat:@"handle_%@:", [message method]];
+    NSString* selectorName = [NSString stringWithFormat:@"handle_%@:", [message method]];
     SEL selector = NSSelectorFromString(selectorName);
     if ([self respondsToSelector:selector]) {
       [self performSelector:selector withObject:message];
@@ -193,7 +191,6 @@
     else {
       NSLog(@"WARNING: No handler for %@", [message method]);
     }
-    [selectorName release];
   }
 }
 
@@ -253,7 +250,7 @@
 
 - (void)handle_upcOnJoinRoom:(UPCMessage*)pMessage
 {
-  [outputRenderer outputInfoMessage:@"Welcome to Collab!"];
+  [outputRenderer renderInfoMessage:@"Welcome to Collab!"];
   
   Client* client = [clients getClient:clientId];
   
@@ -277,7 +274,7 @@
   Client* client = [clients getClient:cid];
   
   if (client) {
-    [outputRenderer outputInfoMessage:[NSString stringWithFormat:@"%@: %@", [client username], msg]];
+    [outputRenderer renderPublicMessage:msg sender:client];
   }
 }
 
@@ -304,7 +301,7 @@
   Client* client = [clients getClient:cid];
   
   if (client) {
-    [outputRenderer outputInfoMessage:[NSString stringWithFormat:@" * %@ %@", [client username], msg]];
+    [outputRenderer renderActionMessage:msg sender:client];
   }
 }
 
@@ -312,7 +309,8 @@
 {
   NSString* msg = [[pMessage args] objectAtIndex:1];
   
-  [outputRenderer outputInfoMessage:msg];
+  /* @todo get client */
+  //[outputRenderer renderJoinMessage:client];
 }
 
 - (void)handle_upcOnRemoveClient:(UPCMessage*)pMessage
@@ -322,7 +320,7 @@
   Client* client = [clients getClient:cid];
   
   if (client) {
-    [outputRenderer outputInfoMessage:[NSString stringWithFormat:@"%@ left.", [client username]]];
+    [outputRenderer renderQuitMessage:client];
   }
   
   [clients removeClient:cid];

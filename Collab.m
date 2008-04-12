@@ -54,6 +54,13 @@
 
 #pragma mark -
 
+- (NSString*)username
+{
+  return [[clients getClient:clientId] username];
+}
+
+#pragma mark -
+
 - (IBAction)connect:(id)sender
 {
   [socket open];

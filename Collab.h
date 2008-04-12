@@ -35,6 +35,8 @@
 #pragma mark -
 
 @interface Collab (API)
+- (NSString*)username;
+
 - (void)connect;
 - (void)connectAndSetAttributes:(NSDictionary*)attributes;
 - (void)disconnect;
