@@ -23,6 +23,7 @@
 - (void)processIncomingXML:(NSXMLDocument*)pXML;
 - (void)sendPublicMessage:(NSString*)pMessage;
 - (void)sendAction:(NSString*)pMessage;
+- (void)sendAttributeUpdate:(NSString*)value forKey:(NSString*)key;
 @end
 
 #pragma mark -
@@ -195,19 +196,28 @@
 - (void)sendPublicMessage:(NSString*)pMessage
 {
   UPCMessage* message = [[UPCMessage alloc] initWithMethod:@"invokeOnRoom" withRoomId:@"unity" withArgs:@"displayMessage", @"collab.global", @"false", pMessage, nil];
-  
   [socket sendXML:[message XMLDocument]];
-  
   [message release];
 }
 
 - (void)sendAction:(NSString*)pMessage
 {
   UPCMessage* message = [[UPCMessage alloc] initWithMethod:@"invokeOnNamespace" withRoomId:@"unity" withArgs:@"meText", @"collab", @"true", pMessage, nil];
-  
   [socket sendXML:[message XMLDocument]];
-  
   [message release];
+}
+
+- (void)sendAttributeUpdate:(NSString*)value forKey:(NSString*)key
+{
+  UPCMessage* message = [[UPCMessage alloc] initWithMethod:@"upcSetClientAttribute" withRoomId:@"unity" withArgs:key, value, @"null", @"true", @"false", @"false", nil];
+  [socket sendXML:[message XMLDocument]];
+  [message release];
+  
+  Client* client = [clients getClient:clientId];
+  if (client) {
+    [client setAttribute:key withValue:value];
+    [usersTable reloadData];
+  }
 }
 
 #pragma mark -
@@ -411,7 +421,7 @@
 
 - (void)command_nick:(NSString*)args
 {
-  
+  [self sendAttributeUpdate:args forKey:@"username"];
 }
 
 - (void)command_clear:(NSString*)args
