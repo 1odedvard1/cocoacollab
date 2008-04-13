@@ -411,12 +411,23 @@
 
 - (void)command_whois:(NSString*)args
 {
-  
+  Client* client = [clients getClientByUsername:args];
+  if (client) {
+    NSString* key;
+    NSEnumerator* keys = [[client attributes] keyEnumerator];
+    
+    while ((key = [keys nextObject]) != nil) {
+      [outputRenderer renderInfoMessage:[NSString stringWithFormat:@"%@: %@", key, [[client attributes] valueForKey:key]]];
+    }
+  }
+  else {
+    [outputRenderer renderInfoMessage:[NSString stringWithFormat:@"No user named '%@'", args]];
+  }
 }
 
 - (void)command_msg:(NSString*)args
 {
-  
+  [outputRenderer renderInfoMessage:@"Outgoing private messages not yet supported, sorry :-)"]; 
 }
 
 - (void)command_nick:(NSString*)args

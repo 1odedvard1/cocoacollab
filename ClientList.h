@@ -21,6 +21,8 @@
 - (id)init;
 
 - (Client*)getClient:(NSString*)clientId;
+- (Client*)getClientByAttribute:(NSString*)key withValue:(NSString*)value;
+- (Client*)getClientByUsername:(NSString*)username;
 - (void)addClient:(Client*)client;
 - (void)removeClient:(NSString*)clientId;
 

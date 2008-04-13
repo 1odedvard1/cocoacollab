@@ -27,6 +27,8 @@
   [clients release];
 }
 
+#pragma mark -
+
 - (Client*)getClient:(NSString*)clientId
 {
   Client* client;
@@ -37,6 +39,35 @@
   }
   return nil;
 }
+
+- (Client*)getClientByAttribute:(NSString*)key withValue:(NSString*)value
+{
+  Client* client;
+  for (client in clients) {
+    NSEnumerator* keys = [[client attributes] keyEnumerator];
+    NSString* fkey;
+    
+    while ((fkey = [keys nextObject]) != nil) {
+      if ([key isEqualToString:fkey] && [value isEqualToString:[client getAttribute:fkey]]) {
+        return client;
+      }
+    }
+  }
+  return nil;
+}
+
+- (Client*)getClientByUsername:(NSString*)username
+{
+  Client* client;
+  for (client in clients) {
+    if ([username isEqualToString:[client username]]) {
+      return client;
+    }
+  }
+  return nil;
+}
+
+#pragma mark -
 
 - (void)addClient:(Client*)client
 {
