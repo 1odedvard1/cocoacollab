@@ -48,3 +48,12 @@
 - (IBAction)clearOutput:(id)sender;
 
 @end
+
+#pragma mark -
+
+@interface SimpleController (Commands)
+- (void)command_me:(NSString*)args;
+- (void)command_whois:(NSString*)args;
+- (void)command_msg:(NSString*)args;
+- (void)command_nick:(NSString*)args;
+@end

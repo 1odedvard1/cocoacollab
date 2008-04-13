@@ -16,6 +16,7 @@
 		AD34B7F20DAEE370000F0167 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD34B7F10DAEE370000F0167 /* WebKit.framework */; };
 		AD5F1FD00DA1720A00BB44B0 /* XMLSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5F1FCF0DA1720A00BB44B0 /* XMLSocketTests.m */; };
 		AD66B65C0DA2B47700AC0B89 /* UPCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD66B65A0DA2B47700AC0B89 /* UPCMessage.m */; };
+		AD8650C90DB2B73500F1C7A8 /* NSStringExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8650C80DB2B73500F1C7A8 /* NSStringExtensions.m */; };
 		ADADD50F0DA04C0000874171 /* XMLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADADD50E0DA04C0000874171 /* XMLSocket.m */; };
 		ADD8385A0D93AA62007BCA95 /* NetSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD838580D93AA62007BCA95 /* NetSocket.m */; };
 		ADD88EF50DAEF28B00A7E7A9 /* default.html in Resources */ = {isa = PBXBuildFile; fileRef = ADD88EF40DAEF28B00A7E7A9 /* default.html */; };
@@ -76,6 +77,8 @@
 		AD5F1FCF0DA1720A00BB44B0 /* XMLSocketTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLSocketTests.m; sourceTree = "<group>"; };
 		AD66B65A0DA2B47700AC0B89 /* UPCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPCMessage.m; sourceTree = "<group>"; };
 		AD66B65B0DA2B47700AC0B89 /* UPCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPCMessage.h; sourceTree = "<group>"; };
+		AD8650C70DB2B73500F1C7A8 /* NSStringExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringExtensions.h; sourceTree = "<group>"; };
+		AD8650C80DB2B73500F1C7A8 /* NSStringExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringExtensions.m; sourceTree = "<group>"; };
 		ADADD50D0DA04C0000874171 /* XMLSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLSocket.h; sourceTree = "<group>"; };
 		ADADD50E0DA04C0000874171 /* XMLSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLSocket.m; sourceTree = "<group>"; };
 		ADD838580D93AA62007BCA95 /* NetSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetSocket.m; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				AD032EBB0DA1C8820039A853 /* SimpleController.m */,
 				ADD88FAF0DB0099C00A7E7A9 /* OutputRenderer.h */,
 				ADD88FB00DB0099C00A7E7A9 /* OutputRenderer.m */,
+				AD8650C70DB2B73500F1C7A8 /* NSStringExtensions.h */,
+				AD8650C80DB2B73500F1C7A8 /* NSStringExtensions.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				ADE283D60DA4E20D005D3B0A /* ClientList.m in Sources */,
 				ADD8B74C0DA9AB3E00C3528E /* Collab.m in Sources */,
 				ADD88FB10DB0099C00A7E7A9 /* OutputRenderer.m in Sources */,
+				AD8650C90DB2B73500F1C7A8 /* NSStringExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@
 #import "Client.h"
 #import "ClientList.h"
 #import "OutputRenderer.h"
+#import "NSStringExtensions.h"
 
 #import <WebKit/WebView.h>
 #import <WebKit/WebFrame.h>
@@ -21,6 +22,7 @@
 @interface SimpleController (Private)
 - (void)processIncomingXML:(NSXMLDocument*)pXML;
 - (void)sendPublicMessage:(NSString*)pMessage;
+- (void)sendAction:(NSString*)pMessage;
 @end
 
 #pragma mark -
@@ -103,17 +105,38 @@
 {
   NSLog(@"processInput");
   
-  NSString* input = [sender stringValue];
-  [self sendPublicMessage:input];
-
-  Client* client = [clients getClient:clientId];
+  NSString* input   = [sender stringValue];
+  NSString* command = nil;
+  NSString* args    = nil;
   
-  if (client) {
-    [outputRenderer renderPublicMessage:input sender:client];
+  if ([@"/" isEqualToString:[input substringWithRange:NSMakeRange(0, 1)]]) {
+    NSRange delim = [input rangeOfString:@" "];
+    int len = (delim.location == NSNotFound) ? ([input length] - 1) : (delim.location - 1);
+    
+    command = [input substringWithRange:NSMakeRange(1, len)];
+    
+    if ([input length] > [command length] + 2) {
+      args = [NSString trim:[input substringWithRange:NSMakeRange(len + 1, [input length] - (len + 1))]];
+    }
+    
+    SEL selector = NSSelectorFromString([NSString stringWithFormat:@"command_%@:", command]);
+    if ([self respondsToSelector:selector]) {
+      [self performSelector:selector withObject:args];
+    }
+    else {
+      [outputRenderer renderInfoMessage:[NSString stringWithFormat:@"Invalid command '%@'", command]];
+    }
+  }
+  else {
+    [self sendPublicMessage:input];
+
+    Client* client = [clients getClient:clientId];
+    if (client) {
+      [outputRenderer renderPublicMessage:input sender:client];
+    }
   }
   
   [[self window] makeFirstResponder:inputText];
-  
   [inputText setStringValue:@""];
 }
 
@@ -171,10 +194,20 @@
 
 - (void)sendPublicMessage:(NSString*)pMessage
 {
-  UPCMessage* message =
-    [[UPCMessage alloc] initWithMethod:@"invokeOnRoom" withRoomId:@"unity" withArgs:@"displayMessage", @"collab.global", @"false", pMessage, nil];
+  UPCMessage* message = [[UPCMessage alloc] initWithMethod:@"invokeOnRoom" withRoomId:@"unity" withArgs:@"displayMessage", @"collab.global", @"false", pMessage, nil];
   
   [socket sendXML:[message XMLDocument]];
+  
+  [message release];
+}
+
+- (void)sendAction:(NSString*)pMessage
+{
+  UPCMessage* message = [[UPCMessage alloc] initWithMethod:@"invokeOnNamespace" withRoomId:@"unity" withArgs:@"meText", @"collab", @"true", pMessage, nil];
+  
+  [socket sendXML:[message XMLDocument]];
+  
+  [message release];
 }
 
 #pragma mark -
@@ -357,6 +390,28 @@
   NSString* args = [[pMessage args] objectAtIndex:3];
   
   [clients addClient:[Client fromId:cid andUnityAttributeString:args]];
+}
+
+#pragma mark -
+
+- (void)command_me:(NSString*)args
+{
+  [self sendAction:args];
+}
+
+- (void)command_whois:(NSString*)args
+{
+  
+}
+
+- (void)command_msg:(NSString*)args
+{
+  
+}
+
+- (void)command_nick:(NSString*)args
+{
+  
 }
 
 @end

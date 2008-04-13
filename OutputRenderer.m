@@ -66,7 +66,7 @@
 
 - (void)renderActionMessage:(NSString*)message sender:(Client*)sender
 {
-  NSString* text = [NSString stringWithFormat:@"* %@ %@.", [sender username], message];
+  NSString* text = [NSString stringWithFormat:@"* %@ %@", [sender username], message];
   [self writeElement:[self createElement:@"p" withContent:text withClass:@"msg_action"]];
 }
 
