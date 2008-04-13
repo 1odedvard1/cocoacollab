@@ -241,9 +241,12 @@
   NSString* val = [[pMessage args] objectAtIndex:4];
   
   Client* client = [clients getClient:cid];
-  if (client) {
-    [client setAttribute:key withValue:val];
+  if (!client) {
+    client = [Client fromId:cid];
+    [clients addClient:client];
   }
+  
+  [client setAttribute:key withValue:val];
   
   [usersTable reloadData];
   
@@ -256,18 +259,16 @@
   
   Client* client = [clients getClient:clientId];
   
-  if (client) {
-    NSString* msg = [NSString stringWithFormat:@"<b>%@ has joined.</b>", [client username]];
-    
-    UPCMessage* joinMessage =
-      [[UPCMessage alloc] initWithMethod:@"invokeOnRoom" withRoomId:@"unity" withArgs:@"joinMessage", @"collab.global", @"false", msg, nil];
-    
-    [socket sendXML:[joinMessage XMLDocument]];
-    
-    [joinMessage release];
-    
-    [outputRenderer renderJoinMessage:client];
-  }
+  NSString* msg = [NSString stringWithFormat:@"<b>%@ has joined.</b>", [client username]];
+  
+  UPCMessage* joinMessage =
+    [[UPCMessage alloc] initWithMethod:@"invokeOnRoom" withRoomId:@"unity" withArgs:@"joinMessage", @"collab.global", @"false", msg, nil];
+  
+  [socket sendXML:[joinMessage XMLDocument]];
+  
+  [joinMessage release];
+  
+  [outputRenderer renderJoinMessage:client];
 }
 
 - (void)handle_displayMessage:(UPCMessage*)pMessage
@@ -276,10 +277,12 @@
   NSString* msg = [[pMessage args] objectAtIndex:1];
   
   Client* client = [clients getClient:cid];
-  
-  if (client) {
-    [outputRenderer renderPublicMessage:msg sender:client];
+  if (!client) {
+    client = [Client fromId:cid];
+    [clients addClient:client];
   }
+  
+  [outputRenderer renderPublicMessage:msg sender:client];
 }
 
 - (void)handle_upcSetClientList:(UPCMessage*)pMessage
@@ -303,10 +306,12 @@
   NSString* msg = [[pMessage args] objectAtIndex:1];
   
   Client* client = [clients getClient:cid];
-  
-  if (client) {
-    [outputRenderer renderActionMessage:msg sender:client];
+  if (!client) {
+    client = [Client fromId:cid];
+    [clients addClient:client];
   }
+  
+  [outputRenderer renderActionMessage:msg sender:client];
 }
 
 - (void)handle_joinMessage:(UPCMessage*)pMessage
@@ -315,6 +320,10 @@
   NSString* msg = [[pMessage args] objectAtIndex:1];
   
   Client* client = [clients getClient:cid];
+  if (!client) {
+    client = [Client fromId:cid];
+    [clients addClient:client];
+  }
   
   /* Nasty but nescessary hack due to flaw in Collab protocol */
   if ([msg length] > 25 && [[msg substringToIndex:25] isEqualToString:@"<font color=\"#B1661D\"><b>"]) {
@@ -332,10 +341,12 @@
   NSString* cid = [[pMessage args] objectAtIndex:2];
   
   Client* client = [clients getClient:cid];
-  
-  if (client) {
-    [outputRenderer renderQuitMessage:client];
+  if (!client) {
+    client = [Client fromId:cid];
+    [clients addClient:client];
   }
+  
+  [outputRenderer renderQuitMessage:client];
   
   [clients removeClient:cid];
 }
