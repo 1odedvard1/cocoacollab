@@ -43,6 +43,7 @@
 - (void)handle_joinMessage:(UPCMessage*)pMessage;
 - (void)handle_upcOnRemoveClient:(UPCMessage*)pMessage;
 - (void)handle_upcOnAddClient:(UPCMessage*)pMessage;
+- (void)handle_receiveBotMsg:(UPCMessage*)pMessage;
 @end
 
 @implementation SimpleController
@@ -368,11 +369,19 @@
     [clients addClient:client];
   }
   
+  NSLog(@"MESSAGE: %@", msg);
+  
   /* Nasty but nescessary hack due to flaw in Collab protocol */
   if ([msg length] > 25 && [[msg substringToIndex:25] isEqualToString:@"<font color=\"#B1661D\"><b>"]) {
     int start = 25 + [[client username] length] + 16;
     int end   = [msg length] - 7 - start;
     [outputRenderer renderPrivateMessage:[msg substringWithRange:NSMakeRange(start, end)] sender:client];
+  }
+  /* Another nasty hack, this time for Alice.. */
+  else if ([msg length] > 25 && [[msg substringToIndex:25] isEqualToString:@"<font color='#5A3A87'><b>"]) {
+    int start = 25 + [[client username] length] + 15;
+    int end   = [msg length] - 7 - start;
+    [outputRenderer renderAliceMessage:[msg substringWithRange:NSMakeRange(start, end)] sender:client];
   }
   else {
     [outputRenderer renderJoinMessage:client];
@@ -400,6 +409,20 @@
   NSString* args = [[pMessage args] objectAtIndex:3];
   
   [clients addClient:[Client fromId:cid andUnityAttributeString:args]];
+}
+
+- (void)handle_receiveBotMsg:(UPCMessage*)pMessage
+{
+  NSString* cid = [[pMessage args] objectAtIndex:0];
+  NSString* msg = [[pMessage args] objectAtIndex:1];
+  NSString* bot = [[pMessage args] objectAtIndex:2];
+  
+  if ([@"Alice" isEqualToString:bot]) {
+    Client* client = [clients getClient:cid];
+    if (client) {
+      [outputRenderer renderAliceReply:msg recipient:client];
+    }
+  }
 }
 
 #pragma mark -

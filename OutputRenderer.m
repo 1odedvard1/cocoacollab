@@ -82,6 +82,18 @@
   [self writeElement:[self createElement:@"p" withContent:message withClass:@"msg_quit"]];
 }
 
+- (void)renderAliceMessage:(NSString*)message sender:(Client*)sender
+{
+  NSString* text = [NSString stringWithFormat:@"%@ -> Alice: %@", [sender username], message];
+  [self writeElement:[self createElement:@"p" withContent:text withClass:@"msg_alice"]];
+}
+
+- (void)renderAliceReply:(NSString*)message recipient:(Client*)recipient
+{
+  NSString* text = [NSString stringWithFormat:@"Alice -> %@: %@", [recipient username], message];
+  [self writeElement:[self createElement:@"p" withContent:text withClass:@"msg_alice"]];
+}
+
 #pragma mark -
 
 - (DOMDocument*)document

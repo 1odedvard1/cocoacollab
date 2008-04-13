@@ -26,6 +26,8 @@
 - (void)renderActionMessage:(NSString*)message sender:(Client*)sender;
 - (void)renderJoinMessage:(Client*)sender;
 - (void)renderQuitMessage:(Client*)sender;
+- (void)renderAliceMessage:(NSString*)message sender:(Client*)sender;
+- (void)renderAliceReply:(NSString*)message recipient:(Client*)recipient;
 
 - (void)clear;
 
