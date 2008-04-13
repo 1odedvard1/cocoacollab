@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+#define DEBUG_TRAFFIC 1
+
 @class NetSocket;
 @class NullTerminatedTokenBuffer;
 

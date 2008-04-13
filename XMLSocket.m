@@ -38,7 +38,10 @@
 {
   NSString* data = [[pXML XMLString] stringByAppendingString:NULL_TERMINATOR];
   [self writeString:data encoding:NSUTF8StringEncoding];
+  
+#ifdef DEBUG_TRAFFIC
   NSLog(@"->> %@", data);
+#endif
 }
 
 #pragma mark -
@@ -62,7 +65,9 @@
   
   [err release];
   
+#ifdef DEBUG_TRAFFIC
   NSLog(@"<<- %@", pToken);
+#endif
 }
 
 @end

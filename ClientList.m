@@ -53,7 +53,7 @@
   
   if (client) {
     [clients removeObject:client];
-    [client release];
+    //[client release]; - double free?!
   }
   
   if ([delegate respondsToSelector:@selector(clientList:clientRemoved:)]) {
