@@ -414,4 +414,9 @@
   
 }
 
+- (void)command_clear:(NSString*)args
+{
+  [self clearOutput:nil];
+}
+
 @end
