@@ -7,20 +7,20 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NetSocket.h"
 
 #define DEBUG_TRAFFIC 1
 
-@class NetSocket;
 @class NullTerminatedTokenBuffer;
 
 @interface XMLSocket : NetSocket {
-
   NullTerminatedTokenBuffer* buffer;
-  
 }
 
 @property(readonly) NullTerminatedTokenBuffer* buffer;
 - (id)init;
+- (id)initWithDelegate:(id)pDelegate;
+
 - (void)dealloc;
 
 - (void)sendXML:(NSXMLDocument*)pXML;

@@ -18,9 +18,13 @@
 
 @interface Collab : NSObject {
   id delegate;
+  
+  NSString* roomId;
+  NSString* namespaceName;
+  
   NSString* clientId;
   ClientList* clients;
-  NSMutableArray* history;
+  
   XMLSocket* socket;
 }
 
@@ -28,19 +32,18 @@
 
 @property(readonly) NSString* clientId;
 @property(readonly) ClientList* clients;
-@property(readonly) NSArray* history;
 
+- (void)initWithRoomId:(NSString*)pRoomId withNamespaceName:(NSString*)pNamespaceName;
+
+- (NSString*)username;
+
+- (void)connect;
+- (void)disconnect;
 @end
 
 #pragma mark -
 
 @interface Collab (API)
-- (NSString*)username;
-
-- (void)connect;
-- (void)connectAndSetAttributes:(NSDictionary*)attributes;
-- (void)disconnect;
-
 - (void)sendRawMessage:(NSString*)method withRoomId:(NSString*)roomId withArgs:firstArg, ...;
 
 - (void)sendMessage:(NSString*)message;

@@ -25,7 +25,6 @@
 @synthesize delegate;
 @synthesize clientId;
 @synthesize clients;
-@synthesize history;
 
 - (id)init
 {
@@ -36,9 +35,7 @@
   
   socket = [[XMLSocket alloc] init];
   [socket setDelegate:self];
-  
-  history = [[NSMutableArray alloc] init];
-  
+    
   return self;
 }
 
@@ -46,7 +43,6 @@
 {
   [clients release];
   [socket release];
-  [history release];
   [clientId release];
   
   [super dealloc];

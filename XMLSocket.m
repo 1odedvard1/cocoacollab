@@ -26,6 +26,13 @@
   return self;
 }
 
+- (id)initWithDelegate:(id)pDelegate
+{
+  self = [self init];
+  [self setDelegate:pDelegate];
+  return self;
+}
+
 - (void)dealloc
 {
   [buffer release];

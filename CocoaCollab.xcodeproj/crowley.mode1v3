@@ -272,6 +272,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -378,9 +379,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>AD8650530DB161BB00F1C7A8</string>
+				<string>AD3B747F0DB4137100017F63</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>AD8650540DB161BB00F1C7A8</string>
+				<string>AD3B74800DB4137100017F63</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -514,14 +515,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AD8651950DB2D5E200F1C7A8</string>
-		<string>AD86512A0DB2C1A300F1C7A8</string>
-		<string>AD86512B0DB2C1A300F1C7A8</string>
-		<string>AD86512C0DB2C1A300F1C7A8</string>
-		<string>AD86511C0DB2C00A00F1C7A8</string>
-		<string>AD8650A40DB2B23100F1C7A8</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>ADD8386C0D93B074007BCA95</string>
 		<string>/Users/crowley/Work/Personal/Cocoa/CocoaCollab/CocoaCollab.xcodeproj</string>
 	</array>
@@ -564,8 +557,6 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -605,7 +596,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>ADD8386C0D93B074007BCA95</string>
-				<string>AD86506E0DB163B100F1C7A8</string>
+				<string>AD3B74960DB4193000017F63</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
