@@ -13,6 +13,8 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		AD032D840DA174800039A853 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD032D830DA174800039A853 /* OCMock.framework */; };
 		AD032EBC0DA1C8820039A853 /* SimpleController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD032EBB0DA1C8820039A853 /* SimpleController.m */; };
+		AD0602630DB6C2B700F922C4 /* USimpleClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0602620DB6C2B700F922C4 /* USimpleClientTests.m */; };
+		AD0602AA0DB6CA9200F922C4 /* UMessageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0602A90DB6CA9200F922C4 /* UMessageUtils.m */; };
 		AD34B7F20DAEE370000F0167 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD34B7F10DAEE370000F0167 /* WebKit.framework */; };
 		AD5F1FD00DA1720A00BB44B0 /* XMLSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5F1FCF0DA1720A00BB44B0 /* XMLSocketTests.m */; };
 		AD66B65C0DA2B47700AC0B89 /* UPCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD66B65A0DA2B47700AC0B89 /* UPCMessage.m */; };
@@ -73,6 +75,10 @@
 		AD032D830DA174800039A853 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = /Library/Frameworks/OCMock.framework; sourceTree = "<absolute>"; };
 		AD032EBA0DA1C8820039A853 /* SimpleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleController.h; sourceTree = "<group>"; };
 		AD032EBB0DA1C8820039A853 /* SimpleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleController.m; sourceTree = "<group>"; };
+		AD0602610DB6C2B700F922C4 /* USimpleClientTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USimpleClientTests.h; sourceTree = "<group>"; };
+		AD0602620DB6C2B700F922C4 /* USimpleClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USimpleClientTests.m; sourceTree = "<group>"; };
+		AD0602A80DB6CA9200F922C4 /* UMessageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessageUtils.h; sourceTree = "<group>"; };
+		AD0602A90DB6CA9200F922C4 /* UMessageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMessageUtils.m; sourceTree = "<group>"; };
 		AD34B7F10DAEE370000F0167 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		AD5F1FCE0DA1720A00BB44B0 /* XMLSocketTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLSocketTests.h; sourceTree = "<group>"; };
 		AD5F1FCF0DA1720A00BB44B0 /* XMLSocketTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLSocketTests.m; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AD0602670DB6C36F00F922C4 /* Unity */,
 				ADE283EE0DA4E35B005D3B0A /* Collab */,
 				AD0BF6230D9F9C9F006F80A8 /* Net */,
 				ADADD5080DA0493B00874171 /* Util */,
@@ -144,10 +151,6 @@
 				AD032EBB0DA1C8820039A853 /* SimpleController.m */,
 				ADD88FAF0DB0099C00A7E7A9 /* OutputRenderer.h */,
 				ADD88FB00DB0099C00A7E7A9 /* OutputRenderer.m */,
-				AD8650C70DB2B73500F1C7A8 /* NSStringExtensions.h */,
-				AD8650C80DB2B73500F1C7A8 /* NSStringExtensions.m */,
-				AD7FA88D0DB5C40400B8DC5C /* USimpleClient.h */,
-				AD7FA88E0DB5C40400B8DC5C /* USimpleClient.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -229,6 +232,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD0602660DB6C36400F922C4 /* Unity */ = {
+			isa = PBXGroup;
+			children = (
+				AD0602610DB6C2B700F922C4 /* USimpleClientTests.h */,
+				AD0602620DB6C2B700F922C4 /* USimpleClientTests.m */,
+			);
+			name = Unity;
+			sourceTree = "<group>";
+		};
+		AD0602670DB6C36F00F922C4 /* Unity */ = {
+			isa = PBXGroup;
+			children = (
+				AD7FA88D0DB5C40400B8DC5C /* USimpleClient.h */,
+				AD7FA88E0DB5C40400B8DC5C /* USimpleClient.m */,
+				AD0602A80DB6CA9200F922C4 /* UMessageUtils.h */,
+				AD0602A90DB6CA9200F922C4 /* UMessageUtils.m */,
+			);
+			name = Unity;
+			sourceTree = "<group>";
+		};
 		AD0BF6230D9F9C9F006F80A8 /* Net */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +275,8 @@
 		ADADD5080DA0493B00874171 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				AD8650C70DB2B73500F1C7A8 /* NSStringExtensions.h */,
+				AD8650C80DB2B73500F1C7A8 /* NSStringExtensions.m */,
 				ADE9E5890D9F10F300CA3EA3 /* NullTerminatedTokenBuffer.h */,
 				ADE9E58A0D9F10F300CA3EA3 /* NullTerminatedTokenBuffer.m */,
 			);
@@ -296,6 +321,7 @@
 		ADE9E4FE0D9EE51A00CA3EA3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AD0602660DB6C36400F922C4 /* Unity */,
 				ADE283EF0DA4E366005D3B0A /* Collab */,
 				AD0BF6340D9F9D02006F80A8 /* Net */,
 				ADADD5790DA073D600874171 /* Util */,
@@ -418,6 +444,7 @@
 				ADD88FB10DB0099C00A7E7A9 /* OutputRenderer.m in Sources */,
 				AD8650C90DB2B73500F1C7A8 /* NSStringExtensions.m in Sources */,
 				AD7FA88F0DB5C40400B8DC5C /* USimpleClient.m in Sources */,
+				AD0602AA0DB6CA9200F922C4 /* UMessageUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +456,7 @@
 				AD5F1FD00DA1720A00BB44B0 /* XMLSocketTests.m in Sources */,
 				ADE283EA0DA4E326005D3B0A /* ClientListTests.m in Sources */,
 				ADE283EB0DA4E326005D3B0A /* ClientTests.m in Sources */,
+				AD0602630DB6C2B700F922C4 /* USimpleClientTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
