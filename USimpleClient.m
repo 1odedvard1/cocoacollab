@@ -25,6 +25,8 @@
   [super dealloc];
 }
 
+#pragma mark -
+
 - (void)connect
 {
   if (socket && [socket isConnected]) {
@@ -40,6 +42,11 @@
 {
   [socket close];
   [socket release];
+}
+
+- (void)invokeMethod:(NSString*)pName ns:(NSString*)pNamespace roomId:(NSString*)pRoomId
+{
+  
 }
 
 @end

@@ -18,8 +18,7 @@
 }
 
 @property(readonly) XMLSocket* socket;
-
 - (void)connect;
 - (void)disconnect;
-
+- (void)invokeMethod:(NSString*)pName ns:(NSString*)pNamespace roomId:(NSString*)pRoomId;
 @end
