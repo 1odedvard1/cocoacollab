@@ -46,6 +46,7 @@
 - (IBAction)processInput:(id)sender;
 - (IBAction)toggleWindowVisibility:(id)sender;
 - (IBAction)clearOutput:(id)sender;
+- (IBAction)launchWiki:(id)sender;
 
 @end
 

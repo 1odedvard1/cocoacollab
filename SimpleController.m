@@ -159,6 +159,11 @@
   [outputRenderer clear];
 }
 
+- (IBAction)launchWiki:(id)sender
+{
+  [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://github.com/cliffrowley/cocoacollab/wikis/"]];
+}
+
 #pragma mark -
 
 - (void)netsocketConnected:(NetSocket*)pSocket
