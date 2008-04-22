@@ -75,6 +75,8 @@
   [statusItem setImage:menuIcon];
   //[statusItem setAction:@selector(toggleWindowVisibility:)];
   
+  [[self window] makeKeyAndOrderFront:nil];
+  
   [outputRenderer clear];
 }
 
