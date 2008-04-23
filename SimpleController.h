@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Growl/growl.h>
 
 #define DEFAULT_HOST @"unity.collab.nl"
 #define DEFAULT_PORT 9110
@@ -17,7 +18,7 @@
 @class WebView;
 @class OutputRenderer;
 
-@interface SimpleController : NSWindowController {
+@interface SimpleController : NSWindowController <GrowlApplicationBridgeDelegate> {
   NSString* clientId;
   
   XMLSocket* socket;

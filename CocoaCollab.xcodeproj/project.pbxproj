@@ -16,6 +16,9 @@
 		AD0602630DB6C2B700F922C4 /* USimpleClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0602620DB6C2B700F922C4 /* USimpleClientTests.m */; };
 		AD0602AA0DB6CA9200F922C4 /* UMessageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0602A90DB6CA9200F922C4 /* UMessageUtils.m */; };
 		AD34B7F20DAEE370000F0167 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD34B7F10DAEE370000F0167 /* WebKit.framework */; };
+		AD3CABE80DBF9E73008A302C /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = AD3CABE70DBF9E73008A302C /* Growl Registration Ticket.growlRegDict */; };
+		AD3CAC500DBFA4CD008A302C /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3CAC4F0DBFA4CD008A302C /* Growl.framework */; };
+		AD3CAC580DBFA4D2008A302C /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AD3CAC4F0DBFA4CD008A302C /* Growl.framework */; };
 		AD5F1FD00DA1720A00BB44B0 /* XMLSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5F1FCF0DA1720A00BB44B0 /* XMLSocketTests.m */; };
 		AD66B65C0DA2B47700AC0B89 /* UPCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD66B65A0DA2B47700AC0B89 /* UPCMessage.m */; };
 		AD7FA88F0DB5C40400B8DC5C /* USimpleClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7FA88E0DB5C40400B8DC5C /* USimpleClient.m */; };
@@ -55,6 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				AD3CAC580DBFA4D2008A302C /* Growl.framework in CopyFiles */,
 				ADEE54D90DADFDF5004B9C46 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +84,8 @@
 		AD0602A80DB6CA9200F922C4 /* UMessageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessageUtils.h; sourceTree = "<group>"; };
 		AD0602A90DB6CA9200F922C4 /* UMessageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMessageUtils.m; sourceTree = "<group>"; };
 		AD34B7F10DAEE370000F0167 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		AD3CABE70DBF9E73008A302C /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
+		AD3CAC4F0DBFA4CD008A302C /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		AD5F1FCE0DA1720A00BB44B0 /* XMLSocketTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLSocketTests.h; sourceTree = "<group>"; };
 		AD5F1FCF0DA1720A00BB44B0 /* XMLSocketTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLSocketTests.m; sourceTree = "<group>"; };
 		AD66B65A0DA2B47700AC0B89 /* UPCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPCMessage.m; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				ADEE54BD0DADFD73004B9C46 /* Sparkle.framework in Frameworks */,
 				AD34B7F20DAEE370000F0167 /* WebKit.framework in Frameworks */,
+				AD3CAC500DBFA4CD008A302C /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +165,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD3CAC4F0DBFA4CD008A302C /* Growl.framework */,
 				ADEE54BC0DADFD73004B9C46 /* Sparkle.framework */,
 				AD032D830DA174800039A853 /* OCMock.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -218,6 +226,7 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				ADD88EF40DAEF28B00A7E7A9 /* default.html */,
+				AD3CABE70DBF9E73008A302C /* Growl Registration Ticket.growlRegDict */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -399,6 +408,7 @@
 				ADEE55270DAE9365004B9C46 /* CocoaCollab.png in Resources */,
 				ADEE55280DAE9379004B9C46 /* CocoaCollab.icns in Resources */,
 				ADD88EF50DAEF28B00A7E7A9 /* default.html in Resources */,
+				AD3CABE80DBF9E73008A302C /* Growl Registration Ticket.growlRegDict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

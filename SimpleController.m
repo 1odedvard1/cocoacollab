@@ -54,6 +54,8 @@
 - (void)handle_receiveBotMsg:(UPCMessage*)pMessage;
 @end
 
+#pragma mark -
+
 @implementation SimpleController
 
 @synthesize clientId;
@@ -91,6 +93,8 @@
   [[self window] makeKeyAndOrderFront:nil];
   
   [outputRenderer clear];
+  
+  [GrowlApplicationBridge setGrowlDelegate:self];
 }
 
 - (void)dealloc
@@ -196,6 +200,8 @@
 - (void)netsocketConnected:(NetSocket*)pSocket
 {
   [outputRenderer renderInfoMessage:@"Connected."];
+  
+  [GrowlApplicationBridge notifyWithTitle:@"Connected!" description:@"You are now connected to Collab" notificationName:@"Connected" iconData:nil priority:0 isSticky:NO clickContext:nil];
 }
 
 - (void)netsocket:(NetSocket*)pSocket connectionTimedOut:(NSTimeInterval*)pTimeout
@@ -205,6 +211,8 @@
 
 - (void)netsocketDisconnected:(NetSocket*)pSocket
 {
+  [GrowlApplicationBridge notifyWithTitle:@"Disconnected!" description:@"You were disconnected from Collab" notificationName:@"Disconnected" iconData:nil priority:0 isSticky:NO clickContext:nil];
+  
   [outputRenderer renderInfoMessage:@"Disconnected."];
 }
 
@@ -432,7 +440,10 @@
   if ([msg length] > 25 && [[msg substringToIndex:25] isEqualToString:@"<font color=\"#B1661D\"><b>"]) {
     int start = 25 + [[client username] length] + 16;
     int end   = [msg length] - 7 - start;
-    [outputRenderer renderPrivateMessage:[msg substringWithRange:NSMakeRange(start, end)] sender:client];
+    NSString* text = [msg substringWithRange:NSMakeRange(start, end)];
+    [outputRenderer renderPrivateMessage:text sender:client];
+    
+    [GrowlApplicationBridge notifyWithTitle:[NSString stringWithFormat:@"Private message from %@", [client username]] description:text notificationName:@"Private Message" iconData:nil priority:0 isSticky:NO clickContext:nil];
   }
   /* Another nasty hack, this time for Alice.. */
   else if ([msg length] > 25 && [[msg substringToIndex:25] isEqualToString:@"<font color='#5A3A87'><b>"]) {
@@ -480,6 +491,13 @@
       [outputRenderer renderAliceReply:msg recipient:client];
     }
   }
+}
+
+#pragma mark -
+
+- (void)growlIsReady
+{
+  NSLog(@"GROWL IS READY!");
 }
 
 #pragma mark -
