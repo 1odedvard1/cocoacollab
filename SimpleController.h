@@ -31,6 +31,7 @@
   IBOutlet NSTableView* usersTable;
   IBOutlet WebView* webView;
   IBOutlet OutputRenderer* outputRenderer;
+  IBOutlet NSUserDefaultsController* userDefaults;
 }
 
 @property(readonly) NSString* clientId;

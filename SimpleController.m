@@ -33,6 +33,14 @@
 - (void)clientList:(ClientList*)clientList clientRemoved:(Client*)client;
 @end
 
+#pragma mark -
+
+@interface SimpleController (NSWindowDelegate)
+- (void)windowDidMove:(NSNotification*)pNotification;
+@end
+
+#pragma mark
+
 @interface SimpleController (ProtocolHandler)
 - (void)handle_upcSetClientID:(UPCMessage*)message;
 - (void)handle_upcOnClientAttributeUpdate:(UPCMessage*)pMessage;
@@ -74,6 +82,14 @@
   [statusItem setToolTip:@"CocoaCollab!"];
   [statusItem setImage:menuIcon];
   //[statusItem setAction:@selector(toggleWindowVisibility:)];
+  
+  NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+  int x = [defaults integerForKey:@"windowPositionX"];
+  int y = [defaults integerForKey:@"windowPositionY"];
+  
+  [[self window] setFrameOrigin:NSMakePoint(x, y)];
+  
+  [[self window] setDelegate:self];
   
   [[self window] makeKeyAndOrderFront:nil];
   
@@ -255,6 +271,20 @@
 - (void)clientList:(ClientList*)clientList clientRemoved:(Client*)client
 {
   [usersTable reloadData];
+}
+
+#pragma mark -
+
+- (void)windowDidMove:(NSNotification*)pNotification
+{
+  //[[[NSUserDefaultsController sharedUserDefaultsController] defaults]
+  
+  NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+  
+  NSRect frame = [[self window] frame];
+  
+  [defaults setInteger:frame.origin.x forKey:@"windowPositionX"];
+  [defaults setInteger:frame.origin.y forKey:@"windowPositionY"];
 }
 
 #pragma mark -
