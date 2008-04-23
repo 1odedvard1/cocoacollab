@@ -10,7 +10,7 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecture = i386;
-		activeBuildConfigurationName = Release;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = ADD838470D93AA24007BCA95 /* CocoaCollab */;
 		activeTarget = 8D1107260486CEB800E47090 /* CocoaCollab */;
 		addToTargets = (
@@ -123,8 +123,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 230659075;
-			PBXWorkspaceStateSaveDate = 230659075;
+			PBXPerProjectTemplateStateSaveDate = 230679102;
+			PBXWorkspaceStateSaveDate = 230679102;
 		};
 		sourceControlManager = ADD838550D93AA32007BCA95 /* Source Control */;
 		userBuildSettings = {
@@ -261,7 +261,7 @@
 		ignoreCount = 0;
 		lineNumber = 95;
 		location = CocoaCollab;
-		modificationTime = 230671102.605752;
+		modificationTime = 230671102.6057521;
 		state = 2;
 	};
 	AD64EABC0D9B18BC005EF01D /* Client.m:95 */ = {
