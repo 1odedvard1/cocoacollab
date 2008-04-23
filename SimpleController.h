@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Growl/growl.h>
+#import <Growl-WithInstaller/growl.h>
 
 #define DEFAULT_HOST @"unity.collab.nl"
 #define DEFAULT_PORT 9110

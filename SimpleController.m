@@ -392,6 +392,12 @@
   }
   
   [outputRenderer renderPublicMessage:msg sender:client];
+  
+  Client* me = [clients getClient:clientId];
+  NSRange rng = [msg rangeOfString:[me username] options:NSCaseInsensitiveSearch];
+  if (rng.location != NSNotFound) {
+    [GrowlApplicationBridge notifyWithTitle:[NSString stringWithFormat:@"%@ mentioned you", [client username]] description:[NSString stringWithFormat:@"%@: %@", [client username], msg] notificationName:@"Nickname Notify" iconData:nil priority:0 isSticky:NO clickContext:nil];
+  }
 }
 
 - (void)handle_upcSetClientList:(UPCMessage*)pMessage
@@ -421,6 +427,12 @@
   }
   
   [outputRenderer renderActionMessage:msg sender:client];
+  
+  Client* me = [clients getClient:clientId];
+  NSRange rng = [msg rangeOfString:[me username] options:NSCaseInsensitiveSearch];
+  if (rng.location != NSNotFound) {
+    [GrowlApplicationBridge notifyWithTitle:[NSString stringWithFormat:@"%@ mentioned you", [client username]] description:[NSString stringWithFormat:@"%@: %@", [client username], msg] notificationName:@"Nickname Notify" iconData:nil priority:0 isSticky:NO clickContext:nil];
+  }
 }
 
 - (void)handle_joinMessage:(UPCMessage*)pMessage

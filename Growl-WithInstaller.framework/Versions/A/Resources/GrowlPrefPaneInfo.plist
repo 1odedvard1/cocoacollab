@@ -5,28 +5,28 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>${EXECUTABLE_NAME}</string>
+	<string>Growl</string>
 	<key>CFBundleIconFile</key>
-	<string>CocoaCollab</string>
+	<string>growl-icon.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.eleventyten.CocoaCollab</string>
+	<string>com.growl.prefpanel</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
-	<string>APPL</string>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1.2</string>
 	<key>CFBundleSignature</key>
-	<string>????</string>
+	<string>GPAN</string>
 	<key>CFBundleVersion</key>
-	<string>0.0.10</string>
+	<string>1.1.2</string>
 	<key>NSMainNibFile</key>
-	<string>MainMenu</string>
+	<string>GrowlPref</string>
+	<key>NSPrefPaneIconFile</key>
+	<string>growl-claw32.tiff</string>
+	<key>NSPrefPaneIconLabel</key>
+	<string>Growl</string>
 	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
-	<key>SUFeedURL</key>
-	<string>http://eleventyten.com/projects/cocoacollab/appcast.xml</string>
-	<key>SUScheduledCheckInterval</key>
-	<string>900</string>
+	<string>GrowlPreferencePane</string>
 </dict>
 </plist>

@@ -294,7 +294,7 @@
 							<real>247</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>5 59 781 488 0 0 1440 878 </string>
+						<string>3 61 781 488 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -331,7 +331,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {512, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>5 59 781 488 0 0 1440 878 </string>
+								<string>3 61 781 488 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -353,7 +353,7 @@
 								<key>Frame</key>
 								<string>{{0, 5}, {512, 442}}</string>
 								<key>RubberWindowFrame</key>
-								<string>5 59 781 488 0 0 1440 878 </string>
+								<string>3 61 781 488 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -513,17 +513,16 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AD3CAC6E0DBFB5DB008A302C</string>
 		<string>AD3CABD00DBF9B2F008A302C</string>
 		<string>AD3CABD10DBF9B2F008A302C</string>
 		<string>AD3CABD20DBF9B2F008A302C</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>ADD8386C0D93B074007BCA95</string>
 		<string>/Users/crowley/Work/Personal/Cocoa/CocoaCollab/CocoaCollab.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
-	<string>5 59 781 488 0 0 1440 878 </string>
+	<string>3 61 781 488 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -894,7 +893,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

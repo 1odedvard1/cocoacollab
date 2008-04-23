@@ -8,6 +8,7 @@
 		<string>Connected</string>
 		<string>Disconnected</string>
 		<string>Private Message</string>
+    <string>Nickname Notify</string>
 	</array>
   
 	<key>TicketVersion</key>
