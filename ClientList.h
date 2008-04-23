@@ -25,6 +25,7 @@
 - (Client*)getClientByUsername:(NSString*)username;
 - (void)addClient:(Client*)client;
 - (void)removeClient:(NSString*)clientId;
+- (void)clear;
 
 @end
 

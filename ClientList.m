@@ -92,4 +92,9 @@
   }
 }
 
+- (void)clear
+{
+  [clients removeAllObjects];
+}
+
 @end

@@ -65,9 +65,6 @@
   clients = [[ClientList alloc] init];
   [clients setDelegate:self];
   
-  socket = [[XMLSocket alloc] init];
-  [socket setDelegate:self];
-  
   return self;
 }
 
@@ -109,16 +106,30 @@
 
 - (IBAction)connect:(id)sender
 {
+  [self disconnect:nil];
+  
+  socket = [[XMLSocket alloc] init];
+  [socket setDelegate:self];
   [socket open];
   [socket connectToHost:DEFAULT_HOST port:DEFAULT_PORT timeout:10];
   [socket scheduleOnCurrentRunLoop];
+  
   [outputRenderer renderInfoMessage:@"Connecting.."];
 }
 
 - (IBAction)disconnect:(id)sender
 {
   [outputRenderer renderInfoMessage:@"Disconnecting.."];
+  
   [socket close];
+  [socket release];
+  socket = nil;
+  
+  [clients clear];
+  [clientId release];
+  clientId = nil;
+  
+  [usersTable reloadData];
 }
 
 - (IBAction)processInput:(id)sender
