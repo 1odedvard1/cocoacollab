@@ -277,8 +277,6 @@
 
 - (void)windowDidMove:(NSNotification*)pNotification
 {
-  //[[[NSUserDefaultsController sharedUserDefaultsController] defaults]
-  
   NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
   
   NSRect frame = [[self window] frame];
