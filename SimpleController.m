@@ -252,6 +252,11 @@
   if (client) {
     [client setAttribute:key withValue:value];
     [usersTable reloadData];
+    
+    if ([@"username" isEqualToString:key]) {
+      NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+      [defaults setObject:value forKey:key];
+    }
   }
 }
 
@@ -314,6 +319,12 @@
   
   [clients addClient:[[Client alloc] initWithId:clientId]];
   
+  NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+  NSString* username = [defaults valueForKey:@"username"];
+  if (username) {
+    [self sendAttributeUpdate:username forKey:@"username"];
+  }
+  
   NSLog(@"Client ID set: %@", clientId);
   
   UPCMessage* joinMessage =
@@ -339,7 +350,7 @@
   [client setAttribute:key withValue:val];
   
   [usersTable reloadData];
-  
+
   NSLog(@"%@: '%@' -> '%@'", cid, key, val);
 }
 
