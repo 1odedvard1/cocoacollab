@@ -39,6 +39,13 @@
 - (void)windowDidMove:(NSNotification*)pNotification;
 @end
 
+#pragma mark -
+
+@interface SimpleController (NSTableViewDelegate)
+- (void)tableView:(NSTableView*)pTableView willDisplayCell:(id)pCell forTableColumn:(NSTableColumn*)pTableColumn row:(NSInteger)pRow;
+//- (NSString*)tableView:(NSTableView*)pTableView toolTipForCell:(NSCell*)pCell tableColumn:(NSTableColumn*)pTableColumn row:(NSInteger)pRow mouseLocation:(NSPoint)pMouseLocation;
+@end
+
 #pragma mark
 
 @interface SimpleController (ProtocolHandler)
@@ -307,6 +314,24 @@
   
   [defaults setInteger:frame.origin.x forKey:@"windowPositionX"];
   [defaults setInteger:frame.origin.y forKey:@"windowPositionY"];
+}
+
+#pragma mark -
+
+- (void)tableView:(NSTableView*)pTableView willDisplayCell:(id)pCell forTableColumn:(NSTableColumn*)pTableColumn row:(NSInteger)pRow {
+  if ([pCell respondsToSelector:@selector(setTextColor:)]) {
+    Client* client = [[clients clients] objectAtIndex:pRow];
+    
+    if ([@"admin" isEqualToString:[client getAttribute:@"rank"]]) {
+      [pCell setTextColor:[NSColor blueColor]];
+    }
+    else if ([@"moderator" isEqualToString:[client getAttribute:@"rank"]]) {
+      [pCell setTextColor:[NSColor purpleColor]];
+    }
+    else {
+      [pCell setTextColor:[NSColor blackColor]];
+    }
+  }
 }
 
 #pragma mark -

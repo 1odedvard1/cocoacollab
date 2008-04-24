@@ -231,8 +231,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -274,8 +272,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>8</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -343,6 +340,8 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -515,6 +514,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>ADD9FDB10DC024F100308A31</string>
+		<string>ADD9FD7D0DBFE66300308A31</string>
+		<string>ADD9FD7E0DBFE66300308A31</string>
+		<string>ADD9FD7F0DBFE66300308A31</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
+		<string>ADD8386C0D93B074007BCA95</string>
 		<string>/Users/crowley/Work/Personal/Cocoa/CocoaCollab/CocoaCollab.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -597,7 +603,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>ADD8386C0D93B074007BCA95</string>
-				<string>AD3CABC00DBF951B008A302C</string>
+				<string>ADD9FD6D0DBFE5D900308A31</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -717,13 +723,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>AD3CABC30DBF9A13008A302C</string>
+				<string>ADD9FD700DBFE5DB00308A31</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>AD3CABC40DBF9A13008A302C</string>
-				<string>AD3CABC50DBF9A13008A302C</string>
-				<string>AD3CABC60DBF9A13008A302C</string>
-				<string>AD3CABC70DBF9A13008A302C</string>
-				<string>AD3CABC80DBF9A13008A302C</string>
+				<string>ADD9FD710DBFE5DB00308A31</string>
+				<string>ADD9FD720DBFE5DB00308A31</string>
+				<string>ADD9FD730DBFE5DB00308A31</string>
+				<string>ADD9FD740DBFE5DB00308A31</string>
+				<string>ADD9FD750DBFE5DB00308A31</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -879,7 +885,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>AD3CABC90DBF9A13008A302C</string>
+				<string>ADD9FD760DBFE5DB00308A31</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
