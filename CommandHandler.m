@@ -1,15 +1,14 @@
 //
-//  Collab.m
+//  CommandHandler.m
 //  CocoaCollab
 //
 //  Created by Cliff Rowley on 03/05/2008.
 //  Copyright 2008 EleventyTen. All rights reserved.
 //
 
-#import "Collab.h"
-#import "Client.h"
+#import "CommandHandler.h"
 
 
-@implementation Collab
+@implementation CommandHandler
 
 @end

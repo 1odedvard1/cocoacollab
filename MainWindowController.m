@@ -1,15 +1,14 @@
 //
-//  Collab.m
+//  MainWindowController.m
 //  CocoaCollab
 //
 //  Created by Cliff Rowley on 03/05/2008.
 //  Copyright 2008 EleventyTen. All rights reserved.
 //
 
-#import "Collab.h"
-#import "Client.h"
+#import "MainWindowController.h"
 
 
-@implementation Collab
+@implementation MainWindowController
 
 @end

@@ -46,6 +46,12 @@
 //- (NSString*)tableView:(NSTableView*)pTableView toolTipForCell:(NSCell*)pCell tableColumn:(NSTableColumn*)pTableColumn row:(NSInteger)pRow mouseLocation:(NSPoint)pMouseLocation;
 @end
 
+#pragma mark -
+
+@interface SimpleController (TextViewDelegate)
+- (BOOL)textView:(NSTextView*)pTextView doCommandBySelector:(SEL)pSelector;
+@end
+
 #pragma mark
 
 @interface SimpleController (ProtocolHandler)
@@ -147,7 +153,7 @@
 {
   NSLog(@"processInput");
   
-  NSString* input   = [sender stringValue];
+  NSString* input   = [inputText string];
   NSString* command = nil;
   NSString* args    = nil;
   
@@ -179,7 +185,9 @@
   }
   
   [[self window] makeFirstResponder:inputText];
-  [inputText setStringValue:@""];
+  
+  [inputText setString:@""];
+  [inputText setNeedsDisplay:TRUE];
 }
 
 - (IBAction)toggleWindowVisibility:(id)sender
@@ -332,6 +340,17 @@
       [pCell setTextColor:[NSColor blackColor]];
     }
   }
+}
+
+#pragma mark -
+
+- (BOOL)textView:(NSTextView*)pTextView doCommandBySelector:(SEL)pSelector
+{
+  if (pSelector == @selector(insertNewline:)) {
+    [self processInput:nil];
+    return YES;
+  }
+  return NO;
 }
 
 #pragma mark -

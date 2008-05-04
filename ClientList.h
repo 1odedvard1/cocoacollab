@@ -3,7 +3,7 @@
 //  CocoaCollab
 //
 //  Created by Cliff Rowley on 26/03/2008.
-//  Copyright 2008 __MyCompanyName__. All rights reserved.
+//  Copyright 2008 EleventyTen. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

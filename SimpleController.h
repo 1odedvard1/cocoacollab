@@ -28,11 +28,10 @@
   NSImage* menuIcon;
   NSStatusItem* statusItem;
   
-  IBOutlet NSTextField* inputText;
+  IBOutlet NSTextView* inputText;
   IBOutlet NSTableView* usersTable;
   IBOutlet WebView* webView;
   IBOutlet OutputRenderer* outputRenderer;
-  IBOutlet NSUserDefaultsController* userDefaults;
 }
 
 @property(readonly) NSString* clientId;
